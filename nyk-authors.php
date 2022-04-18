@@ -12,15 +12,22 @@
 
             // The plugin will act whenever the page is saved, updating the author list if the taxonomy is changed
             return [
-                'onAdminSave' => ['addAuthorsNamesToPage', 0],
+                'onAdminSave' => ['onAdminSave', 0],
             ];
         }
 
-        public function addAuthorsNamesToPage($event) {
-            // Set $page to the current page being edited
+        public function onAdminSave($event) {
+            // Set $page to object being saved
             $page = $event['object'];
 
-            // Apply only to pages under the template 'Blog Item' (blog_item.html.twig)
+            // Check if the saved object is a page
+            if ($page instanceof Page) {
+
+                // Apply only to pages under the template 'Blog Item' (blog_item.html.twig)
+                if ($page->template() === 'blog_item') {
+                    
+                }
+            }
         }
     } 
 ?>
