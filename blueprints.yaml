@@ -4,10 +4,10 @@ description: A simple plugin to fit my project's particular needs
 icon: user-circle
 author:
   name: José Alves Amaro
-homepage: https://github.com/Nykold/author-plugin
+homepage: https://github.com/Nykold/nyk-authors
 keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category
-bugs: https://github.com/Nykold/author-plugin/issues
-docs: https://github.com/Nykold/author-plugin/blob/main/README.md
+bugs: https://github.com/Nykold/nyk-authors/issues
+docs: https://github.com/Nykold/nyk-authors/blob/main/README.md
 license: MIT
 
 dependencies:
