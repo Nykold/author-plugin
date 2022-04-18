@@ -4,7 +4,7 @@
     use Grav\Common\Plugin;
     use Grav\Plugin\Admin\Admin;
 
-    class NykAuthorPlugin extends Plugin {
+    class NykAuthorsPlugin extends Plugin {
         public static function getSubscribedEvents() {
             return [
                 'onAdminSave' => ['addAuthorsNamesToPage', 0],

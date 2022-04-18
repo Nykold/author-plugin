@@ -1,0 +1,35 @@
+name: Nyk Authors
+version: 0.0.1
+description: A simple plugin to fit my project's particular needs
+icon: user-circle
+author:
+  name: José Alves Amaro
+homepage: https://github.com/Nykold/author-plugin
+keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category
+bugs: https://github.com/Nykold/author-plugin/issues
+docs: https://github.com/Nykold/author-plugin/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7' }
+  - { name: admin, version: '>=1.2.3' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    authors:
+      type: array
+      label: Author List
+      help: Associate a given category with an author name to be displayed.
+      placeholder_key: Category name (key)
+      placeholder_value: Author name (value)
