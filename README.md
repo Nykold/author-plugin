@@ -1,1 +1,1 @@
-A simple Grav CMS to fit my particular project's needs.
+A simple Grav CMS plugin to fit my particular project's needs.
