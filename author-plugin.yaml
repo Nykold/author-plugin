@@ -1,1 +1,17 @@
-enabled: true
+enabled:
+  type: toggle
+  label: Plugin status
+  highlight: 1
+  default: 1
+  options:
+    1: Enabled
+    0: Disabled
+  validate:
+    type: bool
+
+authors:
+  type: array
+  label: Author List
+  help: 'Associate a given category with an author name to be displayed.'
+  placeholder_key: 'Category name (key)'
+  placeholder_value: 'Author name (value)'
