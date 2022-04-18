@@ -7,7 +7,7 @@
     class NykAuthorPlugin extends Plugin {
         public static function getSubscribedEvents() {
             return [
-                'onAdminCreatePageFrontmatter' => ['addAuthorsNamesToPage', 0],
+                'onAdminSave' => ['addAuthorsNamesToPage', 0],
             ];
         }
 
