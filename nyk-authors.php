@@ -20,12 +20,15 @@
             // Set $page to object being saved
             $page = $event['object'];
 
-            // Check if the saved object is a page
+            // Only proceed if the saved object is a page
             if ($page instanceof Page) {
 
-                // Apply only to pages under the template 'Blog Item' (blog_item.html.twig)
-                if ($page->template() === 'blog_item') {
-                    
+                // Only proceed if page has template 'Blog Item' (blog_item.html.twig)
+                if ($page->name() === 'blog_item' . $page->extension()) {
+                    // Only proceed if author is set in frontmatter
+                    if (isset($page->header()->taxonomy.author)) {
+
+                    }
                 }
             }
         }
