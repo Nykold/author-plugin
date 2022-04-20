@@ -28,11 +28,19 @@
             if ($page instanceof Page) {
                 // Only proceed if page has template 'Blog Item' (blog_item.html.twig)
                 if ($page->name() === 'blog_item' . $page->extension()) {
-                    // Only proceed if taxonomy is set in frontmatter
+                    // Check for authors in frontmatter
                     if (isset($page->header()->taxonomy['author'])) {
                         $pageAuthors = $page->header()->taxonomy['author'];
                     } else {
                         $pageAuthors = [];
+                    }
+
+                    // If no authors defined, do nothing
+                    if (count($pageAuthors) == 0) {
+                        return;
+                    // If only one author
+                    } elseif (count($pageAuthors) == 1) {
+
                     }
                 }
             }
