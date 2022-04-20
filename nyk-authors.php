@@ -17,17 +17,22 @@
         }
 
         public function onAdminSave($event) {
+            // Load plugin config into a variable
+            $config = $this->config();
+            $authorsConfig = $config['authors'];
+
             // Set $page to object being saved
             $page = $event['object'];
 
             // Only proceed if the saved object is a page
             if ($page instanceof Page) {
-
                 // Only proceed if page has template 'Blog Item' (blog_item.html.twig)
                 if ($page->name() === 'blog_item' . $page->extension()) {
-                    // Only proceed if author is set in frontmatter
-                    if (isset($page->header()->taxonomy.author)) {
-
+                    // Only proceed if taxonomy is set in frontmatter
+                    if (isset($page->header()->taxonomy['author'])) {
+                        $pageAuthors = $page->header()->taxonomy['author'];
+                    } else {
+                        $pageAuthors = [];
                     }
                 }
             }
