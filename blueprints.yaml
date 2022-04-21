@@ -14,13 +14,17 @@ docs: https://github.com/Nykold/nyk-authors/blob/main/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.7' }
-  - { name: admin, version: '>=1.2.3' }
+  - { name: grav, version: '>=1.7.1' }
+  - { name: admin, version: '>=1.10.2' }
+  - { name: form, version: '>=4.1.0' }
+  - { name: login, version: '>=3.3.5' }
+  - { name: email, version: '>=3.0.9' }
+  - { name: flex-objects, version: '>=1.0.0' }
 
 gpm: false
 
 form:
-  validation: strict
+  validation: loose
   fields:
     enabled:
       type: toggle
