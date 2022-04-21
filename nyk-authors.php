@@ -37,10 +37,17 @@
 
                     // If no authors defined, do nothing
                     if (count($pageAuthors) == 0) {
-                        return;
+                        $finalString = "";
                     // If only one author
                     } elseif (count($pageAuthors) == 1) {
-
+                        $authorKey = array_pop($pageAuthors);
+                        if (!array_key_exists($authorKey, $authorsConfig)) {
+                            $finalString = "";
+                        } else {
+                            $finalString = $authorsConfig[$authorKey];
+                        }
+                    } else {
+                        
                     }
                 }
             }
