@@ -35,7 +35,7 @@
                         $pageAuthors = [];
                     }
 
-                    // If no authors defined, do nothing
+                    // If no authors defined, create an empty string
                     if (count($pageAuthors) == 0) {
                         $finalString = "";
                     // If only one author
@@ -46,8 +46,16 @@
                         } else {
                             $finalString = $authorsConfig[$authorKey];
                         }
+                    // For more than one author
                     } else {
-                        
+                        $authorsArray = [];
+                        foreach($pageAuthors as $authorKey){
+                            $authorsArray[] = $authorsConfig[$authorKey];
+                        }
+
+                        $lastAuthor = array_pop($authorsArray);
+                        $finalString = implode(', ', $authorsArray);
+                        $finalString .= ' and '.$lastAuthor;
                     }
                 }
             }
