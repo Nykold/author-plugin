@@ -57,6 +57,11 @@
                         $finalString = implode(', ', $authorsArray);
                         $finalString .= ' e '.$lastAuthor;
                     }
+
+                    // Write finalString into frontmatter
+                    if ($finalString) {
+                        $page->header()->author_string = $finalString;
+                    }
                 }
             }
         }
