@@ -1,9 +1,12 @@
 name: Nyk Authors
+slug: nyk-authors
+type: plugin
 version: 0.0.1
-description: A simple plugin to fit my project's particular needs
+description: "A simple plugin to fit my project's particular needs."
 icon: user-circle
 author:
   name: José Alves Amaro
+  url: https://github.com/Nykold
 homepage: https://github.com/Nykold/nyk-authors
 keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category
 bugs: https://github.com/Nykold/nyk-authors/issues
@@ -13,6 +16,8 @@ license: MIT
 dependencies:
   - { name: grav, version: '>=1.7' }
   - { name: admin, version: '>=1.2.3' }
+
+gpm: false
 
 form:
   validation: strict
