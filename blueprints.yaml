@@ -1,11 +1,12 @@
 name: Nyk Authors
 slug: nyk-authors
 type: plugin
-version: 0.0.1
-description: "A simple plugin to fit my project's particular needs."
+version: 0.1.0
+description: A simple plugin to fit my project&#039;s particular needs
 icon: user-circle
 author:
   name: José Alves Amaro
+  email: jose.alves.amaro@gmail.com
   url: https://github.com/Nykold
 homepage: https://github.com/Nykold/nyk-authors
 keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category
@@ -21,19 +22,17 @@ dependencies:
   - { name: email, version: '>=3.0.9' }
   - { name: flex-objects, version: '>=1.0.0' }
 
-gpm: false
-
 form:
   validation: loose
   fields:
     enabled:
       type: toggle
-      label: Plugin status
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
       highlight: 1
-      default: 1
+      default: 0
       options:
-        1: Enabled
-        0: Disabled
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
     authors:
