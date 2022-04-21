@@ -55,7 +55,7 @@
 
                         $lastAuthor = array_pop($authorsArray);
                         $finalString = implode(', ', $authorsArray);
-                        $finalString .= ' and '.$lastAuthor;
+                        $finalString .= ' e '.$lastAuthor;
                     }
                 }
             }
