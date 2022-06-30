@@ -1,9 +1,9 @@
 {
-  "name": "nykold/nyk-authors",
+  "name": "17927040/nyk-authors",
   "type": "grav-plugin",
-  "description": "A simple plugin to fit my project&#039;s particular needs",
+  "description": "A basic author management plugin for Grav",
   "keywords": ["plugin"],
-  "homepage": "https://github.com/Nykold/nyk-authors",
+  "homepage": "https://github.com/17927040/grav-plugin-nyk-authors",
   "license": "MIT",
   "authors": [
     {

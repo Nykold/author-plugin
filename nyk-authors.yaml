@@ -1,3 +1,2 @@
 enabled: true
-active: true
-authors:
+text_var: Custom Text added by the **Nyk Authors** plugin (disable plugin to remove)

@@ -1,109 +1,176 @@
 <?php
-    namespace Grav\Plugin;
+namespace Grav\Plugin;
 
-    use Composer\Autoload\ClassLoader;
-    use Grav\Common\Plugin;
-    use Grav\Plugin\Admin\Admin;
-    use Grav\Common\Page\Page;
-    use Grav\Common\Page\Header;
-    use Grav\Common\Page\Interfaces\PageInterface;
-    use Grav\Common\Taxonomy;
-    use RocketTheme\Toolbox\Event\Event;
+use Composer\Autoload\ClassLoader;
+use Grav\Common\Grav;
+use Grav\Common\Flex\Types\Pages\PageObject;
+use Grav\Common\Page\Page;
+use Grav\Common\Page\Pages;
+use Grav\Common\Page\Collection;
+use Grav\Common\Plugin;
+use Grav\Common\User\DataUser\User as DataUser;
+use Grav\Common\User\DataUser\UserCollection;
+use Grav\Common\User\User;
+use RocketTheme\Toolbox\File\File;
+use RocketTheme\Toolbox\Event\Event;
+
+/**
+ * Class NykAuthorsPlugin
+ * @package Grav\Plugin
+ */
+class NykAuthorsPlugin extends Plugin
+{
+    /**
+     * @return array
+     */
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            'onPluginsInitialized' => [
+                ['autoload', 100000], //TODO: Remove when plugin requires Grav 1.7
+                ['onPluginsInitialized', 0]
+            ]
+        ];
+    }
 
     /**
-     * Class NykAuthorsPlugin
-     * @package Grav\Plugin
+     * Composer autoload
+     *
+     * @return ClassLoader
      */
-    class NykAuthorsPlugin extends Plugin {
+    public function autoload(): ClassLoader
+    {
+        return require __DIR__ . '/vendor/autoload.php';
+    }
+
+    /**
+     * Initialize the plugin
+     */
+    public function onPluginsInitialized()
+    {
+        // Don't proceed if not in the admin plugin
+        if (!$this->isAdmin()) {
+            return;
+        }
+
+        // Don't proceed if the plugin is not enabled
+        if (!$this->config->get('plugins.nyk-authors.enabled')) {
+            return;
+        }
+
+        // Enable the main events we are interested in
+        $this->enable([
+            'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0],
+            'onAdminSave' => ['onAdminSave', 0]
+        ]);
+    }
+
+    public function onAdminCreatePageFrontmatter(Event $event)
+    {
         /**
-         * @return array
-         * 
-         * The getSubscribedEvents() gives the core a list of events
-         *     that the plugin wants to listen to. The key of each
-         *     array section is the event that the plugin listens to
-         *     and the value (in the form of an array) contains the
-         *     callable (or function) as well as the priority. The
-         *     higher the number the higher the priority.
+         * SECTION Automatic Current User to Frontmatter
+         * Automatically adds the current user's username to categories
          */
-        public static function getSubscribedEvents() {
-            return [
-                'onPluginsInitialized' => ['onPluginsInitialized', 0],
-            ];
+
+        $header = $event['header']; // page frontmatter
+        $username = $this->grav['user']['username']; // current user's username
+
+        // if categories are currently empty (should be, page just created), save current user's username as category
+        if (!isset($header['taxonomy']['category'])) {
+            $header['taxonomy']['category'] = array($username);
+            $event['header'] = $header; // save the edited frontmatter
         }
 
-         /**
-         * Composer autoload.
-         * 
-         * @return ClassLoader
+        /**
+         * !SECTION Automatic Current User to Frontmatter
          */
-        
-        public function autoload(): ClassLoader {
-            return require __DIR__ . '/vendor/autoload.php';
-        }
+    }
 
-        public function onPluginsInitialized() {
-            if ($this->isAdmin()) {
-                $this->enable([
-                    'onAdminSave' => ['onAdminSave', 0],
-                ]);
-                return;
-            }
-        }
+    public function onAdminSave(Event $event)
+    {
+        $page = $event['object'] ?? $event['page'];
+        $header = $page['header'];
 
-        public function onAdminSave(Event $event) {
-            // Load plugin config into a variable
-            $config = $this->config();
-            $authorsConfig = $config['authors'];
+        // Don't proceed if not saving a page
+        if (!$page instanceof Page && !$page instanceof PageObject)  {
+            return;
 
-            // Set $page to object being saved
-            $page = $event['object'];
-            $header = $page->header();
-            if (!$header instanceof Header) {
-                $header = new Header((array)$header);
-            }
+        } else {
+        /**
+         * SECTION Natural Language String
+         * Makes a natural language string that can be included in the text (to be saved to frontmatter)
+         */
+            /**
+             * SECTION Fetch Full Names
+             * Takes usernames in categories and adds corresponding full names to an array
+             */
 
-            // Only proceed if the saved object is a page
-            if ($page instanceof Page) {
-                // Only proceed if page has template 'Blog Item' (blog_item.html.twig)
-                if ($page->name() === 'blog_item' . $page->extension()) {
-                    // Check for authors in frontmatter
-                    if (isset($header->taxonomy['author'])) {
-                        $pageAuthors = $header->taxonomy['author'];
+            $input = $header['taxonomy']['category']; // categories in frontmatter (usernames)
+
+            $authors = array(); // empty array to add full names to
+            
+            foreach ($input as &$category) {
+                $user = $this->grav['accounts']->load($category); // user with each category's username
+                if ($user && $user->exists()) {
+
+                    $username = $user['username'];
+                    $fullName = $user['fullname'];
+
+                    /**
+                     * SECTION Add Links to Authors
+                     * Adds links to an author page to each author's name
+                     */
+
+                    if (TRUE) { // TODO placeholder for future plugin settings
+
+                        $aTag = '<a rel="author" href="/autor/' . $username . '" target="_blank">';
+
+                        $authorLink = $aTag . $fullName . "</a>";
+
+                        array_push($authors, $authorLink);
+
+                    /**
+                     * !SECTION Add Links to Authors
+                     */
+
                     } else {
-                        $pageAuthors = [];
-                    }
-
-                    // If no authors defined, create an empty string
-                    if (count($pageAuthors) == 0) {
-                        $finalString = "";
-                    // If only one author
-                    } elseif (count($pageAuthors) == 1) {
-                        $authorKey = array_pop($pageAuthors);
-                        if (!array_key_exists($authorKey, $authorsConfig)) {
-                            $finalString = "";
-                        } else {
-                            $finalString = $authorsConfig[$authorKey];
-                        }
-                    // For more than one author
-                    } else {
-                        $authorsArray = [];
-                        foreach($pageAuthors as $authorKey){
-                            $authorsArray[] = $authorsConfig[$authorKey];
-                        }
-
-                        $lastAuthor = array_pop($authorsArray);
-                        $finalString = implode(', ', $authorsArray);
-                        $finalString .= ' e '.$lastAuthor;
-                    }
-
-                    // Write finalString into frontmatter
-                    if ($finalString) {
-                        $header->author_string = $finalString;
-                        $page->header() = $header;
-                        $event['object'] = $page;
+                        array_push($authors, $fullName);
                     }
                 }
             }
+            unset($category);
+            /**
+             * !SECTION Fetch Full Names
+             */
+    
+            // test output to frontmatter (development)
+            // $header['test'] = $authors;
+
+            $lastAuthor = array_pop($authors);
+            if ($authors) {
+                $authorString = implode(', ', $authors) . ' e ' . $lastAuthor; // TODO add option for conjunctions in other languages
+            } else {
+                $authorString = $lastAuthor;
+            }
+
+            $header['authorString'] = $authorString; // string to be used in the page
+
+            /**
+             * SECTION Save Edited Frontmatter
+             */
+            $page['header'] = $header;
+            if ($event['object']){
+                $event['object'] = $page;
+            } elseif ($event['page']) {
+                $event['page'] = $page;
+            }
+            /**
+             * !SECTION Save Edited Frontmatter
+             */
+
+        /**
+         * !SECTION Natural Language String
+         */
         }
-    } 
-?>
+    }
+}

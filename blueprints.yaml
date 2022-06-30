@@ -1,26 +1,25 @@
 name: Nyk Authors
 slug: nyk-authors
 type: plugin
-version: 0.1.0
-description: A simple plugin to fit my project&#039;s particular needs
+version: 0.1.1
+description: A plugin to display author names in Grav-powered blogs
 icon: user-circle
 author:
   name: José Alves Amaro
   email: jose.alves.amaro@gmail.com
   url: https://github.com/Nykold
 homepage: https://github.com/Nykold/nyk-authors
-keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category
+keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category, taxonomy
 bugs: https://github.com/Nykold/nyk-authors/issues
 docs: https://github.com/Nykold/nyk-authors/blob/main/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.7.1' }
-  - { name: admin, version: '>=1.10.2' }
-  - { name: form, version: '>=4.1.0' }
-  - { name: login, version: '>=3.3.5' }
-  - { name: email, version: '>=3.0.9' }
-  - { name: flex-objects, version: '>=1.0.0' }
+  - { name: grav, version: '>=1.6.3' }
+  - { name: admin, version: '>=1.9.1' }
+  - { name: form, version: '>=3.0.0' }
+  - { name: login, version: '>=3.0.0'}
+  - { name: email, version: '>=3.0.0'}
 
 form:
   validation: loose
@@ -35,9 +34,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    authors:
-      type: array
-      label: Author List
-      help: Associate a given category with an author name to be displayed.
-      placeholder_key: Category name (key)
-      placeholder_value: Author name (value)
+    text_var:
+      type: text
+      label: PLUGIN_NYK_AUTHORS.TEXT_VARIABLE
+      help: PLUGIN_NYK_AUTHORS.TEXT_VARIABLE_HELP
