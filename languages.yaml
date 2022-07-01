@@ -1,4 +1,31 @@
 en:
   PLUGIN_NYK_AUTHORS:
-    TEXT_VARIABLE: Text Variable
-    TEXT_VARIABLE_HELP: Text to add to the top of a page
+    GENERAL_SECTION: General Settings
+    PLUGIN_STATUS_HELP: Turns the plugin on or off
+    LANG_SECTION: Language Settings
+    LANG_OPTION: Language
+    LANG_OPTION_HELP: The language you want to use for the conjunction in pages with more than one author
+    LANG_EN: English ("and")
+    LANG_FR: French ("et")
+    LANG_DE: German ("und")
+    LANG_PT: Portuguese ("e")
+    LANG_ES: Spanish ("y")
+    LANG_CUSTOM: Others (set a custom conjunction)
+    CUSTOM_CONJUNCTION: Custom conjunction (with "Others" selected)
+    CUSTOM_CONJUNCTION_HELP: Set a custom conjunction for pages with more than one author
+
+pt:
+  PLUGIN_NYK_AUTHORS:
+    GENERAL_SECTION: Definições Gerais
+    PLUGIN_STATUS_HELP: Liga ou desliga o plugin
+    LANG_SECTION: Definições de Idioma
+    LANG_OPTION: Idioma
+    LANG_OPTION_HELP: O idioma a usar para a conjunção em páginas com mais de um autor
+    LANG_EN: Inglês ("and")
+    LANG_FR: Francês ("et")
+    LANG_DE: Alemão ("und")
+    LANG_PT: Português ("e")
+    LANG_ES: Espanhol ("y")
+    LANG_CUSTOM: Outros (definir uma conjunção personalizada)
+    CUSTOM_CONJUNCTION: Conjunção personalizada (com "Outros" selecionado)
+    CUSTOM_CONJUNCTION_HELP: A conjunção personalizada a usar em páginas com mais de um autor

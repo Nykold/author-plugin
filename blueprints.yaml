@@ -24,17 +24,44 @@ dependencies:
 form:
   validation: loose
   fields:
-    enabled:
-      type: toggle
-      label: PLUGIN_ADMIN.PLUGIN_STATUS
-      highlight: 1
-      default: 0
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-    text_var:
-      type: text
-      label: PLUGIN_NYK_AUTHORS.TEXT_VARIABLE
-      help: PLUGIN_NYK_AUTHORS.TEXT_VARIABLE_HELP
+    general_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.GENERAL_SECTION
+      fields:
+        enabled:
+          type: toggle
+          label: PLUGIN_ADMIN.PLUGIN_STATUS
+          help: PLUGIN_NYK_AUTHORS.PLUGIN_STATUS_HELP
+          highlight: 1
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+    spacer1:
+      type: spacer
+      underline: true
+    lang_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.LANG_SECTION
+      fields:
+        lang:
+          type: select
+          label: PLUGIN_NYK_AUTHORS.LANG_OPTION
+          help: PLUGIN_NYK_AUTHORS.LANG_OPTION_HELP
+          default: en
+          options:
+            en: PLUGIN_NYK_AUTHORS.LANG_EN
+            fr: PLUGIN_NYK_AUTHORS.LANG_FR
+            de: PLUGIN_NYK_AUTHORS.LANG_DE
+            pt: PLUGIN_NYK_AUTHORS.LANG_PT
+            es: PLUGIN_NYK_AUTHORS.LANG_ES
+            custom: PLUGIN_NYK_AUTHORS.LANG_CUSTOM
+        custom_lang_conjunction:
+          type: text
+          label: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION
+          help: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION_HELP
+          placeholder: 'and'
+        
+            
