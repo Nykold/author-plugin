@@ -146,9 +146,36 @@ class NykAuthorsPlugin extends Plugin
             // test output to frontmatter (development)
             // $header['test'] = $authors;
 
+            /**
+             * SECTION Conjuntion based on lang
+             */
+
+            $langConfig = $this->config->get('plugins.nyk-authors.lang');
+            $customConjunction = trim($this->config->get('plugins.nyk-authors.custom_lang_conjunction'));
+
+            if ($langConfig == 'en') {
+                $conjunction = ' and ';
+            } elseif ($langConfig == 'fr') {
+                $conjunction = ' et ';
+            } elseif ($langConfig == 'de') {
+                $conjunction = ' und ';
+            } elseif ($langConfig == 'pt') {
+                $conjunction = ' e ';
+            } elseif ($langConfig == 'es') {
+                $conjunction = ' y ';
+            } elseif ($langConfig == 'custom' && $customConjunction) {
+                $conjunction = ' ' . $customConjunction . ' ';
+            } else {
+                $conjunction = ', ';
+            }
+
+            /**
+             * !SECTION Conjunction based on lang
+             */
+
             $lastAuthor = array_pop($authors);
             if ($authors) {
-                $authorString = implode(', ', $authors) . ' e ' . $lastAuthor; // TODO add option for conjunctions in other languages
+                $authorString = implode(', ', $authors) . $conjunction . $lastAuthor; // TODO add option for conjunctions in other languages
             } else {
                 $authorString = $lastAuthor;
             }
@@ -159,7 +186,7 @@ class NykAuthorsPlugin extends Plugin
              * SECTION Save Edited Frontmatter
              */
             $page['header'] = $header;
-            if ($event['object']){
+            if ($event['object']) {
                 $event['object'] = $page;
             } elseif ($event['page']) {
                 $event['page'] = $page;
