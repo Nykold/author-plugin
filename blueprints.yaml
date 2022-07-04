@@ -42,6 +42,24 @@ form:
     spacer1:
       type: spacer
       underline: true
+    author_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.AUTHOR_SECTION
+      fields:
+        automatic_username:
+          type: toggle
+          label: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME
+          help: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+    spacer2:
+      type: spacer
+      underline: true
     lang_section:
       type: section
       title: PLUGIN_NYK_AUTHORS.LANG_SECTION
