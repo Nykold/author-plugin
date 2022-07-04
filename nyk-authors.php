@@ -72,6 +72,11 @@ class NykAuthorsPlugin extends Plugin
          * Automatically adds the current user's username to categories
          */
 
+        // Don't proceed if automatic username is disabled
+         if (!$this->config->get('plugins.nyk-authors.automatic_username')) {
+            return;
+        }
+
         $header = $event['header']; // page frontmatter
         $username = $this->grav['user']['username']; // current user's username
 

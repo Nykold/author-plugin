@@ -1,2 +1,4 @@
 enabled: true
+automatic_username: true
 lang: en
+custom_lang_conjunction: null
