@@ -59,18 +59,20 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 2. As you're editing the page, you can **add as many categories as you want, including other authors**.
 
-3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by "e" — *currently only in Portuguese, other languages to come soon*) and save it to the page's frontmatter. Each author's name will have a link to an author page (at `/autor/username` – *currently in portuguese,will be customizable soon*).
+3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. Each author's name will have a link to an author page (at `/autor/username` – *currently in portuguese,will be customizable soon*).
 
 4. **Place the automatically created string anywhere in your page or template** by using the Twig tag: `{{ page.header.authorString }}`
 
 ## To Do
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. The priority now is to make it a bit more versatile. With that in mind, the next steps, in order, are:
 
-- [ ] Write an actually usable config page for the plugin
-- [ ] Add more language options for the final author separator and the author page url (EN, FR, DE, ES, for now)
-- [ ] Besides langauges, add customizable options for the final author separator and the author page URL
+- [x] Write an actually usable config page for the plugin
+- [x] Add language options for the final author separator (conjunction) (EN, FR, DE, PT, ES for now)
+- [x] Besides languages, add option for a custom conjunction
 - [ ] Make the automatic addition of the current username to a newly created page togglable
 - [ ] Make the inclusion of links to author's page optional
+- [ ] Allow for custom paths for author page's link
+- [ ] Add check to verify if author page exists before adding link
 - [ ] Add blacklist to exclude certain authors from the plugin
 - [ ] Add whitelist to include authors without an user account
 - [ ] Add options other than categories to store authors
