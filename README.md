@@ -55,11 +55,11 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 0. The plugin works by adding categories to the taxonomy of the pages you're creating. It then compares those categories to Grav's user database to know which categories are authors. **Make sure each of your authors has a user account in your Grav installation.** The most relevant fields for each user are their *username* (which you will use as a category and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
 
-1. When you create a new page, **the plugin will automatically add the current username to the page's categories**.
+1. When you create a new page, **the plugin may automatically add the current username to the page's categories** (configurable).
 
 2. As you're editing the page, you can **add as many categories as you want, including other authors**.
 
-3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. Each author's name will have a link to an author page (at `/autor/username` – *currently in portuguese,will be customizable soon*).
+3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. Each author's name will have a link to an author page (at `/autor/username` – *currently in portuguese, will be customizable soon*).
 
 4. **Place the automatically created string anywhere in your page or template** by using the Twig tag: `{{ page.header.authorString }}`
 
@@ -69,7 +69,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Write an actually usable config page for the plugin
 - [x] Add language options for the final author separator (conjunction) (EN, FR, DE, PT, ES for now)
 - [x] Besides languages, add option for a custom conjunction
-- [ ] Make the automatic addition of the current username to a newly created page togglable
+- [x] Make a toggle for the automatic addition of the current username to a newly created page
 - [ ] Make the inclusion of links to author's page optional
 - [ ] Allow for custom paths for author page's link
 - [ ] Add check to verify if author page exists before adding link
