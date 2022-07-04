@@ -45,6 +45,9 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+automatic_username: true
+lang: en
+custom_lang_conjunction: null
 ```
 
 <a id="usage"></a>
