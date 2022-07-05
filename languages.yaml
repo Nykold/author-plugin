@@ -16,6 +16,12 @@ en:
     LANG_CUSTOM: Others (set a custom conjunction)
     CUSTOM_CONJUNCTION: Custom conjunction (with "Others" selected)
     CUSTOM_CONJUNCTION_HELP: Set a custom conjunction for pages with more than one author
+    PAGE_SECTION: Author Page Settings
+    PAGE_LINK: Add links to author pages
+    PAGE_LINK_HELP: Automatically add a link to an author's page to that author in the list
+    PAGE_PATH: Author pages' folder (/path/to/folder/)
+    PAGE_PATH_HELP: 'Set the path to the folder that contains the author pages (format: /path/to/folder/)'
+    PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
 
 pt:
   PLUGIN_NYK_AUTHORS:
@@ -35,3 +41,9 @@ pt:
     LANG_CUSTOM: Outros (definir uma conjunção personalizada)
     CUSTOM_CONJUNCTION: Conjunção personalizada (com "Outros" selecionado)
     CUSTOM_CONJUNCTION_HELP: A conjunção personalizada a usar em páginas com mais de um autor
+    PAGE_SECTION: Definições de Página de Autor
+    PAGE_LINK: Adicionar hiperligações para páginas de autor
+    PAGE_LINK_HELP: Adiciona hiperligações para a página de cada autor a esse autor na lista
+    PAGE_PATH: Pasta de páginas de autor (/caminho/para/a/pasta/)
+    PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
+    PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'

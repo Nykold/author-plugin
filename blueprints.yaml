@@ -81,5 +81,30 @@ form:
           label: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION
           help: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION_HELP
           placeholder: 'and'
-        
-            
+    spacer3:
+      type: spacer
+      underline: true
+    page_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.PAGE_SECTION
+      fields:
+        page_link_enabled:
+          type: toggle
+          label: PLUGIN_NYK_AUTHORS.PAGE_LINK
+          help: PLUGIN_NYK_AUTHORS.PAGE_LINK_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        page_path:
+          type: text
+          label: PLUGIN_NYK_AUTHORS.PAGE_PATH
+          help: PLUGIN_NYK_AUTHORS.PAGE_PATH_HELP
+          placeholder: '/author/'
+          default: '/author/'
+          validate:
+            pattern: '^\/([a-z0-9]+(?:-[a-z0-9]+)*\/)?'
+            message: PLUGIN_NYK_AUTHORS.PAGE_PATH_ERROR

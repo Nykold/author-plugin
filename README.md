@@ -48,6 +48,8 @@ enabled: true
 automatic_username: true
 lang: en
 custom_lang_conjunction: null
+page_link_enabled: true
+page_path: /author/
 ```
 
 <a id="usage"></a>
