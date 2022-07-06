@@ -75,9 +75,10 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Add language options for the final author separator (conjunction) (EN, FR, DE, PT, ES for now)
 - [x] Besides languages, add option for a custom conjunction
 - [x] Make a toggle for the automatic addition of the current username to a newly created page
-- [ ] Make the inclusion of links to author's page optional
+- [x] Make the inclusion of links to author's page optional
 - [ ] Allow for custom paths for author page's link
 - [ ] Add check to verify if author page exists before adding link
+- [ ] Allow custom attributes in the `<a>` tag for author page links
 - [ ] Add blacklist to exclude certain authors from the plugin
 - [ ] Add whitelist to include authors without an user account
 - [ ] Add options other than categories to store authors

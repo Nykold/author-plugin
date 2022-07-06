@@ -27,7 +27,7 @@ class NykAuthorsPlugin extends Plugin
     {
         return [
             'onPluginsInitialized' => [
-                ['autoload', 100000], //TODO: Remove when plugin requires Grav 1.7
+                ['autoload', 100000], // TODO: Remove when plugin requires Grav 1.7
                 ['onPluginsInitialized', 0]
             ]
         ];
@@ -126,7 +126,7 @@ class NykAuthorsPlugin extends Plugin
                      * Adds links to an author page to each author's name
                      */
 
-                    if (TRUE) { // TODO placeholder for future plugin settings
+                    if ($this->config->get('plugins.nyk-authors.page_link_enabled')) {
 
                         $aTag = '<a rel="author" href="/autor/' . $username . '" target="_blank">';
 
