@@ -45,7 +45,7 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
-automatic_username: true
+automatic_username_enabled: true
 lang: en
 custom_lang_conjunction: null
 page_link_enabled: true

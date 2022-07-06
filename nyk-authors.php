@@ -73,7 +73,7 @@ class NykAuthorsPlugin extends Plugin
          */
 
         // Don't proceed if automatic username is disabled
-         if (!$this->config->get('plugins.nyk-authors.automatic_username')) {
+         if (!$this->config->get('plugins.nyk-authors.automatic_username_enabled')) {
             return;
         }
 

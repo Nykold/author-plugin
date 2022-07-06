@@ -46,7 +46,7 @@ form:
       type: section
       title: PLUGIN_NYK_AUTHORS.AUTHOR_SECTION
       fields:
-        automatic_username:
+        automatic_username_enabled:
           type: toggle
           label: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME
           help: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME_HELP
