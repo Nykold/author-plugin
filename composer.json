@@ -1,15 +1,14 @@
 {
-  "name": "17927040/nyk-authors",
+  "name": "nykold/nyk-authors",
   "type": "grav-plugin",
-  "description": "A basic author management plugin for Grav",
+  "description": "A plugin to display author names in Grav-powered blogs",
   "keywords": ["plugin"],
-  "homepage": "https://github.com/17927040/grav-plugin-nyk-authors",
+  "homepage": "https://github.com/Nykold/nyk-authors",
   "license": "MIT",
   "authors": [
     {
       "name": "José Alves Amaro",
-      "email": "jose.alves.amaro@gmail.com",
-      "role": "Developer"
+      "email": "jose.alves.amaro@gmail.com"
     }
   ],
   "require": {
