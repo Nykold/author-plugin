@@ -15,7 +15,7 @@ Installing the Nyk Authors plugin can be done in one of three ways:
 
 ### Admin Plugin (Preferred)
 
-This plugin is designed to work from within the Admin Plugin. So, if you are going to be using the Admin plugin, you can simply install the plugin directly by browsing the `Plugins`-menu and clicking on the `Add` button.
+This plugin is designed to work from within the Admin Plugin. So, if you are going to be using the Admin plugin, you can simply install the plugin directly by browsing the `Plugins` menu and clicking on the `Add` button.
 
 ### GPM Installation
 
@@ -23,7 +23,7 @@ To install the plugin via the [GPM](http://learn.getgrav.org/advanced/grav-gpm),
 
     bin/gpm install nyk-authors
 
-This will install the Nyk Authors plugin into your `/user/plugins`-directory within Grav. Its files can be found under `/your/site/grav/user/plugins/nyk-authors`.
+This will install the Nyk Authors plugin into your `/user/plugins` directory within Grav. Its files can be found under `/your/site/grav/user/plugins/nyk-authors`.
 
 ### Manual Installation
 
@@ -64,9 +64,10 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 2. As you're editing the page, you can **add as many categories as you want, including other authors**.
 
-3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. Each author's name will have a link to an author page (at `/autor/username` – *currently in portuguese, will be customizable soon*).
+3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. If enabled, each author's name may have a link to an author page (page located at a path with the respective username inside of a customizable folder – `/customizable-folder-path/username`).
 
-4. **Place the automatically created string anywhere in your page or template** by using the Twig tag: `{{ page.header.authorString }}`
+4. **Place the automatically created string anywhere in your page or template** by using the Twig tag: `{{ page.header.authorString|raw }}`
+> NOTE: You must turn on Twig processing for the tag to work.
 
 ## To Do
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. The priority now is to make it a bit more versatile. With that in mind, the next steps, in order, are:
@@ -76,7 +77,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Besides languages, add option for a custom conjunction
 - [x] Make a toggle for the automatic addition of the current username to a newly created page
 - [x] Make the inclusion of links to author's page optional
-- [ ] Allow for custom paths for author page's link
+- [x] Allow for custom paths for author page's link
 - [ ] Add check to verify if author page exists before adding link
 - [ ] Allow custom attributes in the `<a>` tag for author page links
 - [ ] Add blacklist to exclude certain authors from the plugin
