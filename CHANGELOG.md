@@ -1,3 +1,10 @@
+# v0.3.0
+## 07/07/2022
+
+1. [](#new)
+    * Added a toggle to turn off adding links to each author's page
+    * Added the option to customize the folder where the author pages are located
+
 # v0.2.0
 ## 04/07/2022
 

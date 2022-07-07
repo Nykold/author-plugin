@@ -66,8 +66,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. If enabled, each author's name may have a link to an author page (page located at a path with the respective username inside of a customizable folder – `/customizable-folder-path/username`).
 
-4. **Place the automatically created string anywhere in your page or template** by using the Twig tag: `{{ page.header.authorString|raw }}`
-> NOTE: You must turn on Twig processing for the tag to work.
+4. **Place the automatically created string anywhere in your page or template** by using the Twig tag `{{ page.header.authorString|raw }}` (*you must turn on Twig processing for the tag to work*).
 
 ## To Do
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. The priority now is to make it a bit more versatile. With that in mind, the next steps, in order, are:
