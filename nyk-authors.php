@@ -128,7 +128,12 @@ class NykAuthorsPlugin extends Plugin
 
                     if ($this->config->get('plugins.nyk-authors.page_link_enabled')) {
 
-                        $href = $this->config->get('plugins.nyk-authors.page_path') . $username;
+                        if ($this->config->get('plugins.nyk-authors.page_path')) {
+                            $href = $this->config->get('plugins.nyk-authors.page_path') . $username;
+                        } else {
+                            $href = '/' . $username; // Sets author page path to /username if no path is set in plugin config
+                        }
+
                         $aTag = '<a rel="author" href="' . $href . '" target="_blank">';
 
                         $authorLink = $aTag . $fullName . "</a>";
