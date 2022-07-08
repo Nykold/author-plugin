@@ -1,3 +1,11 @@
+# v0.3.1
+## 08/07/2022
+
+1. [](#improved)
+    * Added a specific option in config to separate the final author just with a comma (previously the fallback if no config was selected)
+1. [](#bugfix)
+    * Fixed possible issues that could occur if no path for the author pages was chosen in config (added fallback to /username)
+
 # v0.3.0
 ## 07/07/2022
 
