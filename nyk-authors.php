@@ -174,6 +174,8 @@ class NykAuthorsPlugin extends Plugin
                 $conjunction = ' e ';
             } elseif ($langConfig == 'es') {
                 $conjunction = ' y ';
+            } elseif ($langConfig == 'comma') {
+                $conjunction = ', ';
             } elseif ($langConfig == 'custom' && $customConjunction) {
                 $conjunction = ' ' . $customConjunction . ' ';
             } else {

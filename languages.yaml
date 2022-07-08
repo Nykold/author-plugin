@@ -13,6 +13,7 @@ en:
     LANG_DE: German ("und")
     LANG_PT: Portuguese ("e")
     LANG_ES: Spanish ("y")
+    LANG_COMMA: Just a comma (",")
     LANG_CUSTOM: Others (set a custom conjunction)
     CUSTOM_CONJUNCTION: Custom conjunction (with "Others" selected)
     CUSTOM_CONJUNCTION_HELP: Set a custom conjunction for pages with more than one author
@@ -38,6 +39,7 @@ pt:
     LANG_DE: Alemão ("und")
     LANG_PT: Português ("e")
     LANG_ES: Espanhol ("y")
+    LANG_COMMA: Só uma vírgula (",")
     LANG_CUSTOM: Outros (definir uma conjunção personalizada)
     CUSTOM_CONJUNCTION: Conjunção personalizada (com "Outros" selecionado)
     CUSTOM_CONJUNCTION_HELP: A conjunção personalizada a usar em páginas com mais de um autor

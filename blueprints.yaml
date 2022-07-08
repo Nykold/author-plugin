@@ -75,6 +75,7 @@ form:
             de: PLUGIN_NYK_AUTHORS.LANG_DE
             pt: PLUGIN_NYK_AUTHORS.LANG_PT
             es: PLUGIN_NYK_AUTHORS.LANG_ES
+            comma: PLUGIN_NYK_AUTHORS.LANG_COMMA
             custom: PLUGIN_NYK_AUTHORS.LANG_CUSTOM
         custom_lang_conjunction:
           type: text
