@@ -7,6 +7,7 @@ use Grav\Common\Flex\Types\Pages\PageObject;
 use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
 use Grav\Common\Page\Collection;
+use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Plugin;
 use Grav\Common\User\DataUser\User as DataUser;
 use Grav\Common\User\DataUser\UserCollection;
@@ -134,11 +135,23 @@ class NykAuthorsPlugin extends Plugin
                             $href = '/' . $username; // Sets author page path to /username if no path is set in plugin config
                         }
 
-                        $aTag = '<a rel="author" href="' . $href . '" target="_blank">';
+                        // When the request is made in the Admin plugin, this is required for $this->grav['pages'] to work (to check if page exists)
+                        if ($this->isAdmin()) {
+                            $this->grav['admin']->enablePages();
+                        }
 
-                        $authorLink = $aTag . $fullName . "</a>";
+                        $authorPage = $this->grav['pages']->find($href); // Finds the author page, if it exists
 
-                        array_push($authors, $authorLink);
+                        // Only add link if author page exists
+                        if ($authorPage && ($authorPage instanceof Page || $authorPage instanceof PageObject)) {
+                            $aTag = '<a rel="author" href="' . $href . '" target="_blank">';
+                            $authorLink = $aTag . $fullName . "</a>";
+
+                            array_push($authors, $authorLink);
+
+                        } else {
+                            array_push($authors, $fullName);
+                        }
 
                     /**
                      * !SECTION Add Links to Authors
@@ -188,7 +201,7 @@ class NykAuthorsPlugin extends Plugin
 
             $lastAuthor = array_pop($authors);
             if ($authors) {
-                $authorString = implode(', ', $authors) . $conjunction . $lastAuthor; // TODO add option for conjunctions in other languages
+                $authorString = implode(', ', $authors) . $conjunction . $lastAuthor;
             } else {
                 $authorString = $lastAuthor;
             }
