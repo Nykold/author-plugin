@@ -129,6 +129,7 @@ class NykAuthorsPlugin extends Plugin
 
                     if ($this->config->get('plugins.nyk-authors.page_link_enabled')) {
 
+                        // Set href attribute
                         if ($this->config->get('plugins.nyk-authors.page_path')) {
                             $href = $this->config->get('plugins.nyk-authors.page_path') . $username;
                         } else {
@@ -144,12 +145,39 @@ class NykAuthorsPlugin extends Plugin
 
                         // Only add link if author page exists
                         if ($authorPage && ($authorPage instanceof Page || $authorPage instanceof PageObject)) {
-                            $aTag = '<a rel="author" href="' . $href . '" target="_blank">';
+
+                            $aTag = ' href="' . $href . '"'; // Add href attribute
+
+                            if ($this->config->get('plugins.nyk-authors.page_link_attributes')) { // If custom attributes are set, add them
+                                
+                                $aTagAttributes = $this->config->get('plugins.nyk-authors.page_link_attributes');
+
+                                foreach ($aTagAttributes as $attr => $attrValue) {
+                                    // Sanitize $attr
+                                    $attr = str_replace(' ', '', $attr);
+                                    $attr = strtolower($attr);
+
+                                    // Sanitize $attrValue
+                                    $attrValue = str_replace('"', '', $attrValue);
+
+                                    if ($attr !== 'href') { // Don't add another href
+                                        if ($attr === 'id' || $attr === 'class' || $attr === 'style') { // Atributes to add before href
+                                            $aTag = ' ' . $attr . '="' . $attrValue . '"' . $aTag;
+                                        } else { // Attributes to add after href
+                                            $aTag = $aTag . ' ' . $attr . '="' . $attrValue . '"';
+                                        }
+                                    }
+                                }
+                                unset($attr);
+                                unset($attrValue);
+                            }
+
+                            $aTag = '<a' . $aTag . '>';
                             $authorLink = $aTag . $fullName . "</a>";
 
                             array_push($authors, $authorLink);
 
-                        } else {
+                        } else { // If author page does not exist, don't add link
                             array_push($authors, $fullName);
                         }
 
@@ -177,19 +205,19 @@ class NykAuthorsPlugin extends Plugin
             $langConfig = $this->config->get('plugins.nyk-authors.lang');
             $customConjunction = trim($this->config->get('plugins.nyk-authors.custom_lang_conjunction'));
 
-            if ($langConfig == 'en') {
+            if ($langConfig === 'en') {
                 $conjunction = ' and ';
-            } elseif ($langConfig == 'fr') {
+            } elseif ($langConfig === 'fr') {
                 $conjunction = ' et ';
-            } elseif ($langConfig == 'de') {
+            } elseif ($langConfig === 'de') {
                 $conjunction = ' und ';
-            } elseif ($langConfig == 'pt') {
+            } elseif ($langConfig === 'pt') {
                 $conjunction = ' e ';
-            } elseif ($langConfig == 'es') {
+            } elseif ($langConfig === 'es') {
                 $conjunction = ' y ';
-            } elseif ($langConfig == 'comma') {
+            } elseif ($langConfig === 'comma') {
                 $conjunction = ', ';
-            } elseif ($langConfig == 'custom' && $customConjunction) {
+            } elseif ($langConfig === 'custom' && $customConjunction) {
                 $conjunction = ' ' . $customConjunction . ' ';
             } else {
                 $conjunction = ', ';
