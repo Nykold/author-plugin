@@ -2,7 +2,7 @@
 
 The **Nyk Authors** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav).
 
-It is designed to work from within the [Admin Plugin](http://github.com/getgrav/grav-plugin-admin) and it helps with displaying authors' names in pages in Grav-powered blogs.
+It is designed to work from within the [Admin Plugin](http://github.com/getgrav/grav-plugin-admin) and to provide simpler options to display authors' names in pages in Grav-powered blogs.
 
 > NOTE: The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. **It is still in early development and its functionality is still limited.** The way to use it in its current state is described in the [usage section](#usage). I intend to make it more versatile in the future.
 
@@ -58,15 +58,17 @@ page_path: /author/
 
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. **It is still in early development and its functionality is still limited.** However, if you intend to use it for similar purposes, here is how you can do it:
 
-0. The plugin works by adding categories to the taxonomy of the pages you're creating. It then compares those categories to Grav's user database to know which categories are authors. **Make sure each of your authors has a user account in your Grav installation.** The most relevant fields for each user are their *username* (which you will use as a category and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
+0. For now, **the plugin is designed to only work from within the admin plugin**.
 
-1. When you create a new page, **the plugin may automatically add the current username to the page's categories** (configurable).
+1. The plugin works by adding categories to the taxonomy of the pages you're creating. It then compares those categories to Grav's user database to know which categories are authors. **Make sure each of your authors has a user account in your Grav installation.** The most relevant fields for each user are their *username* (which you will use as a category and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
 
-2. As you're editing the page, you can **add as many categories as you want, including other authors**.
+2. When you create a new page, **the plugin may automatically add the current username to the page's categories** (configurable).
 
-3. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. If enabled, each author's name may have a link to an author page (page located at a path with the respective username inside of a customizable folder – `/customizable-folder-path/username`).
+3. As you're editing the page, you can **add as many categories as you want, including other authors**.
 
-4. **Place the automatically created string anywhere in your page or template** by using the Twig tag `{{ page.header.authorString|raw }}` (*you must turn on Twig processing for the tag to work*).
+4. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. If enabled, each author's name may have a link to an author page (page located at a path with the respective username inside of a customizable folder – `/customizable-folder-path/username`).
+
+5. **Place the automatically created string anywhere in your page or template** by using the Twig tag `{{ page.header.authorString|raw }}` (*you must turn on Twig processing for the tag to work*).
 
 ## To Do
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. The priority now is to make it a bit more versatile. With that in mind, the next steps, in order, are:
@@ -77,7 +79,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Make a toggle for the automatic addition of the current username to a newly created page
 - [x] Make the inclusion of links to author's page optional
 - [x] Allow for custom paths for author page's link
-- [ ] Add check to verify if author page exists before adding link
+- [x] Add check to verify if author page exists before adding link
 - [ ] Allow custom attributes in the `<a>` tag for author page links
 - [ ] Add blacklist to exclude certain authors from the plugin
 - [ ] Add whitelist to include authors without an user account
