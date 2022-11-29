@@ -23,6 +23,7 @@ en:
     PAGE_PATH: Author pages' folder (/path/to/folder/)
     PAGE_PATH_HELP: 'Set the path to the folder that contains the author pages (format: /path/to/folder/)'
     PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
+    PAGE_INSTRUCTIONS: Author pages should be at `/[path]/[username]` and should already be created, if you want a link to them. If no path is set, it defaults to `/[username]`.
 
 pt:
   PLUGIN_NYK_AUTHORS:
@@ -49,3 +50,4 @@ pt:
     PAGE_PATH: Pasta de páginas de autor (/caminho/para/a/pasta/)
     PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
     PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'
+    PAGE_INSTRUCTIONS: As páginas de autor deverão estar em `/[caminho]/[nome de utilizador]` e deverão ser previamente criadas, se pretender que uma hiperligação seja adicionada. Se o caminho não for definido, será `/[nome de utilizador]`, por defeito.
