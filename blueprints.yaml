@@ -68,7 +68,7 @@ form:
           type: select
           label: PLUGIN_NYK_AUTHORS.LANG_OPTION
           help: PLUGIN_NYK_AUTHORS.LANG_OPTION_HELP
-          default: en
+          default: comma
           options:
             en: PLUGIN_NYK_AUTHORS.LANG_EN
             fr: PLUGIN_NYK_AUTHORS.LANG_FR
@@ -100,12 +100,17 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        page_link_attributes:
+          type: array
+          label: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES
+          help: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_HELP
+          placeholder_key: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_KEYPH
+          placeholder_value: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_VALUEPH
         page_path:
           type: text
           label: PLUGIN_NYK_AUTHORS.PAGE_PATH
           help: PLUGIN_NYK_AUTHORS.PAGE_PATH_HELP
           placeholder: '/author/'
-          default: '/author/'
           validate:
             pattern: '^\/([a-z0-9]+(?:-[a-z0-9]+)*\/)*'
             message: PLUGIN_NYK_AUTHORS.PAGE_PATH_ERROR

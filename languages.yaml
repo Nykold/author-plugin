@@ -20,6 +20,10 @@ en:
     PAGE_SECTION: Author Page Settings
     PAGE_LINK: Add links to author pages
     PAGE_LINK_HELP: Automatically add a link to an author's page to that author in the list
+    PAGE_LINK_ATTRIBUTES: Link attributes
+    PAGE_LINK_ATTRIBUTES_HELP: Attributes you wish to add to the <a> tags of the author page links (the 'href' attribute will be overwritten)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribute (e.g. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Value (e.g. 'author')
     PAGE_PATH: Author pages' folder (/path/to/folder/)
     PAGE_PATH_HELP: 'Set the path to the folder that contains the author pages (format: /path/to/folder/)'
     PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
@@ -47,6 +51,10 @@ pt:
     PAGE_SECTION: Definições de Página de Autor
     PAGE_LINK: Adicionar hiperligações para páginas de autor
     PAGE_LINK_HELP: Adiciona hiperligações para a página de cada autor a esse autor na lista
+    PAGE_LINK_ATTRIBUTES: Atributos da hiperligação
+    PAGE_LINK_ATTRIBUTES_HELP: Atributos a adicionar às tags <a> das hiperligações para páginas de autor (o atributo 'href' será substituído)
+    PAGE_LINK_ATTRIBUTES_KEYPH: "Atributo (ex.: 'rel')"
+    PAGE_LINK_ATTRIBUTES_VALUEPH: "Valor (ex.: 'author')"
     PAGE_PATH: Pasta de páginas de autor (/caminho/para/a/pasta/)
     PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
     PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'
