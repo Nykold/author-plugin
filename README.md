@@ -49,6 +49,9 @@ automatic_username_enabled: true
 lang: en
 custom_lang_conjunction: null
 page_link_enabled: true
+page_link_attributes:
+  rel: author
+  target: _blank
 page_path: /author/
 ```
 
