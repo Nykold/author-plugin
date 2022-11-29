@@ -1,3 +1,10 @@
+# v0.4.0
+## 29/11/2022
+
+1. [](#improved)
+    * Added logic to check if an author's page exists before adding a link to that page
+    * Added a tooltip in settings to help better understand how links to author pages work
+    
 # v0.3.1
 ## 08/07/2022
 
