@@ -98,7 +98,7 @@ class NykAuthorsPlugin extends Plugin
         $header = $page['header'];
 
         // Don't proceed if not saving a page
-        if (!$page instanceof Page && !$page instanceof PageObject)  {
+        if (!$page instanceof Page && !$page instanceof PageObject) {
             return;
 
         } else {
@@ -116,11 +116,18 @@ class NykAuthorsPlugin extends Plugin
             $authors = array(); // empty array to add full names to
             
             foreach ($input as &$category) {
-                $user = $this->grav['accounts']->load($category); // user with each category's username
-                if ($user && $user->exists()) {
+                $extraAuthors = $this->config->get('plugins.nyk-authors.extra_authors'); // extra authors array as set in config
+                $user = $this->grav['accounts']->load($category); // user account with each category's username
 
+                if ($extraAuthors && array_key_exists($category, $extraAuthors)) {
+                    $username = $category;
+                    $fullName = $extraAuthors[$category];
+                } elseif ($user && $user->exists()) {
                     $username = $user['username'];
                     $fullName = $user['fullname'];
+                }
+
+                if (isset($username) && isset($fullName)) {
 
                     /**
                      * SECTION Add Links to Authors
@@ -189,6 +196,8 @@ class NykAuthorsPlugin extends Plugin
                         array_push($authors, $fullName);
                     }
                 }
+            unset($username);
+            unset($fullName);
             }
             unset($category);
             /**
