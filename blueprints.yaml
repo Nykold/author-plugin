@@ -57,6 +57,20 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        extra_authors_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS
+          text: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
+          help: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
+          icon: plus-square
+          collapsed: true
+          collapsible: true
+          fields:
+            extra_authors:
+              type: array
+              placeholder_key: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_KEYPH
+              placeholder_value: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_VALUEPH
+              style: vertical
     spacer2:
       type: spacer
       underline: true
