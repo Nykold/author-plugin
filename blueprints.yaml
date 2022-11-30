@@ -57,19 +57,43 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        blacklist_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.BLACKLIST
+          help: PLUGIN_NYK_AUTHORS.BLACKLIST_HELP
+          text: PLUGIN_NYK_AUTHORS.BLACKLIST_HELP
+          icon: minus-square
+          collapsed: true
+          collapsible: true
+          fields:
+            blacklist_enabled:
+              type: toggle
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+              style: vertical
+            blacklist:
+              type: array
+              value_only: true
+              placeholder_value: PLUGIN_NYK_AUTHORS.USERNAME
+              style: vertical
         extra_authors_fieldset:
           type: fieldset
           title: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS
-          text: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
           help: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
+          text: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
           icon: plus-square
           collapsed: true
           collapsible: true
           fields:
             extra_authors:
               type: array
-              placeholder_key: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_KEYPH
-              placeholder_value: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_VALUEPH
+              placeholder_key: PLUGIN_NYK_AUTHORS.USERNAME
+              placeholder_value: PLUGIN_NYK_AUTHORS.DISPLAY_NAME
               style: vertical
     spacer2:
       type: spacer

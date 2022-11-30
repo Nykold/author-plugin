@@ -44,16 +44,18 @@ Before configuring this plugin, you should copy the `user/plugins/nyk-authors/ny
 Here is the default configuration and an explanation of available options:
 
 ```yaml
-enabled: true # turns the plugin on or off
-automatic_username_enabled: true # allows adding the current user to the pages authors automatically
-extra_authors: null # list of authors without a user account or display name overwrites
-lang: en # language to be used in the conjunction before the last author
-custom_lang_conjunction: null # sets a custom conjunction if custom is chosen in lang
-page_link_enabled: true # allows adding links to each author's page
-page_link_attributes: # list of HTML attributes to add to author page links
+enabled: true #turns the plugin on or off
+automatic_username_enabled: true #allows adding the current user to a page's authors automatically
+blacklist_enabled: false #turns blacklist on or off
+blacklist: null #usernames that won't be used as authors
+extra_authors: null #list of authors without a user account or display name overwrites
+lang: en #language to be used in the conjunction before the last author
+custom_lang_conjunction: null #sets a custom conjunction if custom is chosen in lang
+page_link_enabled: true #allows adding links to each author's page
+page_link_attributes: #list of HTML attributes to add to author page links
   rel: author
   target: _blank
-page_path: /author/ # path where author pages are located
+page_path: /author/ #path where author pages are located
 ```
 
 <a id="usage"></a>

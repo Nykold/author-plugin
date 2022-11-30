@@ -1,14 +1,16 @@
 en:
   PLUGIN_NYK_AUTHORS:
+    USERNAME: Username
+    DISPLAY_NAME: Display Name
     GENERAL_SECTION: General Settings
     PLUGIN_STATUS_HELP: Turns the plugin on or off
     AUTHOR_SECTION: Author Settings
     AUTOMATIC_USERNAME: Automatically add user as author on page creation
     AUTOMATIC_USERNAME_HELP: Automatically adds the current user as an author when creating new pages
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Usernames that will not be included as authors in any page
     EXTRA_AUTHORS: Additional authors
     EXTRA_AUTHORS_HELP: By default the plugin fetchs user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
-    EXTRA_AUTHORS_KEYPH: Username
-    EXTRA_AUTHORS_VALUEPH: Display Name
     LANG_SECTION: Language Settings
     LANG_OPTION: Language
     LANG_OPTION_HELP: The language you want to use for the conjunction in pages with more than one author
@@ -35,15 +37,17 @@ en:
 
 pt:
   PLUGIN_NYK_AUTHORS:
+    USERNAME: Nome de utilizador
+    DISPLAY_NAME: Nome a exibir
     GENERAL_SECTION: Definições Gerais
     PLUGIN_STATUS_HELP: Liga ou desliga o plugin
     AUTHOR_SECTION: Definições de Autor
     AUTOMATIC_USERNAME: Adicionar utilizador como autor de novas páginas automaticamente
     AUTOMATIC_USERNAME_HELP: Adiciona automaticamente o utilizador atual como autor quando é criada uma nova página
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Nomes de utilizador que não serão considerados autores de qualquer página
     EXTRA_AUTHORS: Autores adicionais
     EXTRA_AUTHORS_HELP: Automaticamente, o plugin usa as contas de utilizador para encontrar nomes de autores. Esta definição permite adicionar autores que não tenham uma conta correspondente ou substituir o nome atribuído a um autor.
-    EXTRA_AUTHORS_KEYPH: Nome de utilizador
-    EXTRA_AUTHORS_VALUEPH: Nome a exibir
     LANG_SECTION: Definições de Idioma
     LANG_OPTION: Idioma
     LANG_OPTION_HELP: O idioma a usar para a conjunção em páginas com mais de um autor
