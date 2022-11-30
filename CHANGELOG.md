@@ -1,3 +1,9 @@
+# v0.5.0
+## 30/11/2022
+
+1. [](#new)
+    * Added possibility of customizing HTML attributes of the `<a>` tag for links to author pages
+    
 # v0.4.0
 ## 29/11/2022
 

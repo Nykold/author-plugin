@@ -83,7 +83,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Make the inclusion of links to author's page optional
 - [x] Allow for custom paths for author page's link
 - [x] Add check to verify if author page exists before adding link
-- [ ] Allow custom attributes in the `<a>` tag for author page links
+- [x] Allow custom attributes in the `<a>` tag for author page links
 - [ ] Add blacklist to exclude certain authors from the plugin
 - [ ] Add whitelist to only include certain authors
 - [ ] Add possibility of including authors without a user account
