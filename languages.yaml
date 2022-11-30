@@ -8,7 +8,9 @@ en:
     AUTOMATIC_USERNAME: Automatically add user as author on page creation
     AUTOMATIC_USERNAME_HELP: Automatically adds the current user as an author when creating new pages
     BLACKLIST: Blacklist
-    BLACKLIST_HELP: Usernames that will not be included as authors in any page
+    BLACKLIST_HELP: Users that will not be included as authors in any page
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Only these users will be included as authors in any page
     EXTRA_AUTHORS: Additional authors
     EXTRA_AUTHORS_HELP: By default the plugin fetchs user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
     LANG_SECTION: Language Settings
@@ -45,7 +47,9 @@ pt:
     AUTOMATIC_USERNAME: Adicionar utilizador como autor de novas páginas automaticamente
     AUTOMATIC_USERNAME_HELP: Adiciona automaticamente o utilizador atual como autor quando é criada uma nova página
     BLACKLIST: Blacklist
-    BLACKLIST_HELP: Nomes de utilizador que não serão considerados autores de qualquer página
+    BLACKLIST_HELP: Utilizadores que não serão considerados autores de qualquer página
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Só estes utilizadores serão considerados autores em qualquer página
     EXTRA_AUTHORS: Autores adicionais
     EXTRA_AUTHORS_HELP: Automaticamente, o plugin usa as contas de utilizador para encontrar nomes de autores. Esta definição permite adicionar autores que não tenham uma conta correspondente ou substituir o nome atribuído a um autor.
     LANG_SECTION: Definições de Idioma

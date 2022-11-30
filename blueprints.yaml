@@ -81,6 +81,30 @@ form:
               value_only: true
               placeholder_value: PLUGIN_NYK_AUTHORS.USERNAME
               style: vertical
+        whitelist_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.WHITELIST
+          help: PLUGIN_NYK_AUTHORS.WHITELIST_HELP
+          text: PLUGIN_NYK_AUTHORS.WHITELIST_HELP
+          icon: check-square
+          collapsed: true
+          collapsible: true
+          fields:
+            whitelist_enabled:
+              type: toggle
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+              style: vertical
+            whitelist:
+              type: array
+              value_only: true
+              placeholder_value: PLUGIN_NYK_AUTHORS.USERNAME
+              style: vertical
         extra_authors_fieldset:
           type: fieldset
           title: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS

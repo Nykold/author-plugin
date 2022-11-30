@@ -48,6 +48,8 @@ enabled: true #turns the plugin on or off
 automatic_username_enabled: true #allows adding the current user to a page's authors automatically
 blacklist_enabled: false #turns blacklist on or off
 blacklist: null #usernames that won't be used as authors
+whitelist_enabled: false #turns whitelist on or off
+whitelist: null #only usernames that will be used as authors
 extra_authors: null #list of authors without a user account or display name overwrites
 lang: en #language to be used in the conjunction before the last author
 custom_lang_conjunction: null #sets a custom conjunction if custom is chosen in lang

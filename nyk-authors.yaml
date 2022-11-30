@@ -2,6 +2,8 @@ enabled: true
 automatic_username_enabled: true
 blacklist_enabled: false
 blacklist: null
+whitelist_enabled: false
+whitelist: null
 extra_authors: null
 lang: en
 custom_lang_conjunction: null
