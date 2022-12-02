@@ -1,3 +1,9 @@
+# v0.8.0
+## 02/12/2022
+
+1. [](#new)
+    * Added setting to choose the taxonomy type used to add authors
+    
 # v0.7.0
 ## 02/12/2022
 

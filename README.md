@@ -72,7 +72,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 0. For now, **the plugin is designed to only work from within the admin plugin**.
 
-1. The plugin works by adding usernames to a taxonomy type (chosen in settings) of the pages you're creating. It then compares those usernames to Grav's user database to find authors. **Make sure each of your authors has a user account in your Grav installation** (or has been added to the *"additional authors"* section of settings). The most relevant fields for each user are their *username* (which you will use in taxonomy and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
+1. The plugin works by adding usernames to a taxonomy type (chosen in settings) in pages you are creating. It then compares those usernames to Grav's user database to find authors. **Make sure each of your authors has a user account in your Grav installation** (or has been added to the *"additional authors"* section of settings). The most relevant fields for each user are their *username* (which you will use in taxonomy and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
 
 2. When you create a new page, **the plugin may automatically add the current username to the page's taxonomy** (configurable).
 
