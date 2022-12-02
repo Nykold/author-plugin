@@ -59,6 +59,21 @@ class NykAuthorsPlugin extends Plugin
             return;
         }
 
+        /**
+         * SECTION Set Taxonomy Type
+         * Sets taxonomy type for the rest of the plugin, according to config
+         */
+
+        global $nykAuthorsTaxonomyType;
+        $taxonomiesConfig = $this->config->get('site.taxonomies');
+        $taxonomyTypeKey = $this->config->get('plugins.nyk-authors.author_taxonomy');
+
+        $nykAuthorsTaxonomyType = $taxonomiesConfig[$taxonomyTypeKey];
+
+        /**
+         * !SECTION Set Taxonomy Type
+         */
+
         // Enable the main events we are interested in
         $this->enable([
             'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0],
@@ -68,22 +83,24 @@ class NykAuthorsPlugin extends Plugin
 
     public function onAdminCreatePageFrontmatter(Event $event)
     {
+        global $nykAuthorsTaxonomyType; // get chosen taxonomy type
+
         /**
          * SECTION Automatic Current User to Frontmatter
-         * Automatically adds the current user's username to categories
+         * Automatically adds the current user's username to chosen taxonomy type
          */
 
         // Don't proceed if automatic username is disabled
-         if (!$this->config->get('plugins.nyk-authors.automatic_username_enabled')) {
+        if (!$this->config->get('plugins.nyk-authors.automatic_username_enabled')) {
             return;
         }
 
         $header = $event['header']; // page frontmatter
         $username = $this->grav['user']['username']; // current user's username
 
-        // if categories are currently empty (should be, page just created), save current user's username as category
-        if (!isset($header['taxonomy']['category'])) {
-            $header['taxonomy']['category'] = array($username);
+        // if chosen taxonomy type is currently empty (should be, page just created), save current user's username in it
+        if (!isset($header['taxonomy'][$nykAuthorsTaxonomyType])) {
+            $header['taxonomy'][$nykAuthorsTaxonomyType] = array($username);
             $event['header'] = $header; // save the edited frontmatter
         }
 
@@ -94,6 +111,8 @@ class NykAuthorsPlugin extends Plugin
 
     public function onAdminSave(Event $event)
     {
+        global $nykAuthorsTaxonomyType; // get chosen taxonomy type
+
         $page = $event['object'] ?? $event['page'];
         $header = $page['header'];
 
@@ -108,10 +127,10 @@ class NykAuthorsPlugin extends Plugin
          */
             /**
              * SECTION Fetch Full Names
-             * Takes usernames in categories and adds corresponding full names to an array
+             * Takes usernames in chosen taxonomy type and adds corresponding full names to an array
              */
 
-            $input = $header['taxonomy']['category']; // categories in frontmatter (usernames)
+            $input = $header['taxonomy'][$nykAuthorsTaxonomyType]; // taxonomy type in frontmatter (usernames)
 
             $authors = array(); // empty array to add full names to
             
@@ -220,10 +239,10 @@ class NykAuthorsPlugin extends Plugin
              */
     
             // test output to frontmatter (development)
-            // $header['test'] = $authors;
+            $header['test'] = $nykAuthorsTaxonomyType;
 
             /**
-             * SECTION Conjuntion based on lang
+             * SECTION Conjuntion Based on Lang
              */
 
             $langConfig = $this->config->get('plugins.nyk-authors.lang');
@@ -248,7 +267,7 @@ class NykAuthorsPlugin extends Plugin
             }
 
             /**
-             * !SECTION Conjunction based on lang
+             * !SECTION Conjunction Based on Lang
              */
 
             $lastAuthor = array_pop($authors);
