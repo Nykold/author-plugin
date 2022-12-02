@@ -46,6 +46,12 @@ form:
       type: section
       title: PLUGIN_NYK_AUTHORS.AUTHOR_SECTION
       fields:
+        author_taxonomy:
+          type: select
+          label: PLUGIN_NYK_AUTHORS.TAXONOMY
+          help: PLUGIN_NYK_AUTHORS.TAXONOMY_HELP
+          default: '0'
+          config-options@: site.taxonomies
         automatic_username_enabled:
           type: toggle
           label: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME

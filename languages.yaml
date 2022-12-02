@@ -5,6 +5,8 @@ en:
     GENERAL_SECTION: General Settings
     PLUGIN_STATUS_HELP: Turns the plugin on or off
     AUTHOR_SECTION: Author Settings
+    TAXONOMY: Author taxonomy type
+    TAXONOMY_HELP: The type of taxonomy used to add authors to pages
     AUTOMATIC_USERNAME: Automatically add user as author on page creation
     AUTOMATIC_USERNAME_HELP: Automatically adds the current user as an author when creating new pages
     BLACKLIST: Blacklist
@@ -44,6 +46,8 @@ pt:
     GENERAL_SECTION: Definições Gerais
     PLUGIN_STATUS_HELP: Liga ou desliga o plugin
     AUTHOR_SECTION: Definições de Autor
+    TAXONOMY: Tipo de taxonomia para autores
+    TAXONOMY_HELP: O tipo de taxonomia que será utilizado para adicionar autores a páginas
     AUTOMATIC_USERNAME: Adicionar utilizador como autor de novas páginas automaticamente
     AUTOMATIC_USERNAME_HELP: Adiciona automaticamente o utilizador atual como autor quando é criada uma nova página
     BLACKLIST: Blacklist
