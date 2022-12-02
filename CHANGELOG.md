@@ -1,3 +1,10 @@
+# v0.7.0
+## 02/12/2022
+
+1. [](#new)
+    * Added whitelist option to only allow chosen authors to be displayed
+    * Added blacklist option to prevent certain authors from being displayed
+    
 # v0.6.0
 ## 30/11/2022
 
