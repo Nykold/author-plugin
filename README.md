@@ -44,20 +44,24 @@ Before configuring this plugin, you should copy the `user/plugins/nyk-authors/ny
 Here is the default configuration and an explanation of available options:
 
 ```yaml
-enabled: true #turns the plugin on or off
-automatic_username_enabled: true #allows adding the current user to a page's authors automatically
-blacklist_enabled: false #turns blacklist on or off
-blacklist: null #usernames that won't be used as authors
-whitelist_enabled: false #turns whitelist on or off
-whitelist: null #only usernames that will be used as authors
-extra_authors: null #list of authors without a user account or display name overwrites
-lang: en #language to be used in the conjunction before the last author
-custom_lang_conjunction: null #sets a custom conjunction if custom is chosen in lang
-page_link_enabled: true #allows adding links to each author's page
-page_link_attributes: #list of HTML attributes to add to author page links
+enabled: true                     # Turn plugin on or off
+
+author_taxonomy: '0'              # Taxonomy type where authors are added
+automatic_username_enabled: true  # Automatically add current user as author
+blacklist_enabled: false          # Enable blacklist
+blacklist: null                   # Usernames excluded from being used as authors
+whitelist_enabled: false          # Enable whitelist
+whitelist: null                   # Only usernames that will be used as authors
+extra_authors: null               # Additional authors without a user account or display name overwrites
+
+lang: en                          # Language used for the conjunction before the last author in string
+custom_lang_conjunction: null     # If lang is set to custom, a custom conjunction
+
+page_link_enabled: true           # Automatically add links to author pages that have already been created
+page_link_attributes:             # HTML attributes added to the <a> tag of links to author pages
   rel: author
   target: _blank
-page_path: /author/ #path where author pages are located
+page_path: /author/               # Path to folder with author pages
 ```
 
 <a id="usage"></a>
@@ -68,11 +72,11 @@ The plugin was originally designed to work with my particular setup in [my blog]
 
 0. For now, **the plugin is designed to only work from within the admin plugin**.
 
-1. The plugin works by adding categories to the taxonomy of the pages you're creating. It then compares those categories to Grav's user database to know which categories are authors. **Make sure each of your authors has a user account in your Grav installation** (or has been added to the *"additional authors"* section of settings). The most relevant fields for each user are their *username* (which you will use as a category and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
+1. The plugin works by adding usernames to a taxonomy type (chosen in settings) of the pages you're creating. It then compares those usernames to Grav's user database to find authors. **Make sure each of your authors has a user account in your Grav installation** (or has been added to the *"additional authors"* section of settings). The most relevant fields for each user are their *username* (which you will use in taxonomy and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
 
-2. When you create a new page, **the plugin may automatically add the current username to the page's categories** (configurable).
+2. When you create a new page, **the plugin may automatically add the current username to the page's taxonomy** (configurable).
 
-3. As you're editing the page, you can **add as many categories as you want, including other authors**.
+3. As you're editing the page, you can **add as many taxonomies as you want, authors or not**.
 
 4. Once you save the page, **the plugin will make a string with the full list of authors** in natural language (separated by commas, with the last author separated by the chosen conjunction) and save it to the page's frontmatter. If enabled, each author's name may have a link to an author page (page located at a path with the respective username inside of a customizable folder – `/customizable-folder-path/username`).
 
@@ -92,7 +96,7 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Add blacklist to exclude certain authors from the plugin
 - [x] Add whitelist to only include certain authors
 - [x] Add possibility of including authors without a user account
-- [ ] Add options other than categories to store authors
+- [x] Add options other than categories to store authors
 - [ ] Use shortcodes to create a simpler way to add the author list into the page
 
 As well as these steps, I continue to use the plugin on a daily basis and will constantly search for ways to make it more user-friendly.
