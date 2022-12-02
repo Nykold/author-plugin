@@ -119,6 +119,9 @@ class NykAuthorsPlugin extends Plugin
                 $extraAuthors = $this->config->get('plugins.nyk-authors.extra_authors'); // extra authors array as set in config
                 $user = $this->grav['accounts']->load($category); // user account with each category's username
 
+                $username = '';
+                $fullName = '';
+
                 if ($extraAuthors && array_key_exists($category, $extraAuthors)) {
                     $username = $category;
                     $fullName = $extraAuthors[$category];
@@ -127,7 +130,18 @@ class NykAuthorsPlugin extends Plugin
                     $fullName = $user['fullname'];
                 }
 
-                if (isset($username) && isset($fullName)) {
+                $whitelist = $this->config->get('plugins.nyk-authors.whitelist');
+                $blacklist = $this->config->get('plugins.nyk-authors.blacklist');
+
+                if ($this->config->get('plugins.nyk-authors.whitelist_enabled') && !in_array($username, $whitelist)) { // if whitelist is enabled, disallow any author not on it
+                    $authorAllowed = false;
+                } elseif ($this->config->get('plugins.nyk-authors.blacklist_enabled') && in_array($username, $blacklist)) { // if blacklist is enabled, disallow any author in it
+                    $authorAllowed = false;
+                } else { // by default, allow author
+                    $authorAllowed = true;
+                }
+
+                if ($authorAllowed && isset($username) && $username !== '' && isset($fullName) && $fullName !== '') {
 
                     /**
                      * SECTION Add Links to Authors
@@ -196,8 +210,9 @@ class NykAuthorsPlugin extends Plugin
                         array_push($authors, $fullName);
                     }
                 }
-            unset($username);
-            unset($fullName);
+                unset($authorAllowed);
+                unset($username);
+                unset($fullName);
             }
             unset($category);
             /**
