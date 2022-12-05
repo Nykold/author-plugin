@@ -39,6 +39,23 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        twigvar_enabled:
+          type: toggle
+          label: PLUGIN_NYK_AUTHORS.TWIGVAR_ENABLED
+          help: PLUGIN_NYK_AUTHORS.TWIGVAR_ENABLED_HELP
+          highlight: 1
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        twigvar:
+          type: text
+          label: PLUGIN_NYK_AUTHORS.TWIGVAR
+          help: PLUGIN_NYK_AUTHORS.TWIGVAR_HELP
+          placeholder: variable
+          default: authors
     spacer1:
       type: spacer
       underline: true
@@ -186,28 +203,3 @@ form:
           type: display
           markdown: true
           content: PLUGIN_NYK_AUTHORS.PAGE_INSTRUCTIONS
-    spacer4:
-      type: spacer
-      underline: true
-    shortcode_section:
-      type: section
-      title: PLUGIN_NYK_AUTHORS.SHORTCODE_SECTION
-      text: PLUGIN_NYK_AUTHORS.SHORTCODE_SECTION_TEXT
-      fields:
-        shortcode_enabled:
-          type: toggle
-          label: PLUGIN_NYK_AUTHORS.SHORTCODE_ENABLED
-          help: PLUGIN_NYK_AUTHORS.SHORTCODE_ENABLED_HELP
-          highlight: 1
-          default: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-        shortcode:
-          type: text
-          label: PLUGIN_NYK_AUTHORS.SHORTCODE
-          help: PLUGIN_NYK_AUTHORS.SHORTCODE_HELP
-          placeholder: shortcode
-          default: authors

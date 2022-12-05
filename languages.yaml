@@ -3,6 +3,10 @@ en:
     USERNAME: Username
     DISPLAY_NAME: Display Name
     GENERAL_SECTION: General Settings
+    TWIGVAR_ENABLED: Use custom Twig variable
+    TWIGVAR_ENABLED_HELP: Allows the set custom Twig variable to be active
+    TWIGVAR: Custom Twig variable
+    TWIGVAR_HELP: Set what custom Twig variable you want to use to display authors in a page
     PLUGIN_STATUS_HELP: Turns the plugin on or off
     AUTHOR_SECTION: Author Settings
     TAXONOMY: Author taxonomy type
@@ -38,18 +42,16 @@ en:
     PAGE_PATH_HELP: 'Set the path to the folder that contains the author pages (format: /path/to/folder/)'
     PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
     PAGE_INSTRUCTIONS: Author pages should be at `/path/to/folder/username` and should already be created, if you want a link to them. If no path is set, it defaults to `/username`.
-    SHORTCODE_SECTION: Shortcode Settings
-    SHORTCODE_SECTION_TEXT: If the Shortcode Core plugin is installed and enabled, you can set a custom shortcode to display authors in a page.
-    SHORTCODE_ENABLED: Use custom shortcode
-    SHORTCODE_ENABLED_HELP: Allows the set custom shortcode to be active
-    SHORTCODE: Custom shortcode
-    SHORTCODE_HELP: Set what custom shortcode you want to use to display authors in a page
 
 pt:
   PLUGIN_NYK_AUTHORS:
     USERNAME: Nome de utilizador
     DISPLAY_NAME: Nome a exibir
     GENERAL_SECTION: Definições Gerais
+    TWIGVAR_ENABLED: Usar variável Twig personalizada
+    TWIGVAR_ENABLED_HELP: Permite que a variável Twig personalizada definida seja utilizada
+    TWIGVAR: Variável Twig personalizada
+    TWIGVAR_HELP: A variável Twig personalizada a utilizar para mostrar autores numa página
     PLUGIN_STATUS_HELP: Liga ou desliga o plugin
     AUTHOR_SECTION: Definições de Autor
     TAXONOMY: Tipo de taxonomia para autores
@@ -85,9 +87,3 @@ pt:
     PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
     PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'
     PAGE_INSTRUCTIONS: As páginas de autor deverão estar em `/caminho/para/a/pasta/nome de utilizador` e deverão ser previamente criadas, para que uma hiperligação seja adicionada. Se o caminho não for definido, será `/nome de utilizador`, automaticamente.
-    SHORTCODE_SECTION: Definições de Shortcode
-    SHORTCODE_SECTION_TEXT: Se o plugin Shortcode Core estiver instalado e ativo, é possível definir um shortcode personalizado para exibir os autores numa página.
-    SHORTCODE_ENABLED: Usar shortcode personalizado
-    SHORTCODE_ENABLED_HELP: Permite que o shortcode personalizado definido seja utilizado
-    SHORTCODE: Shortcode personalizado
-    SHORTCODE_HELP: O shortcode personalizado a utilizar para mostrar autores numa página

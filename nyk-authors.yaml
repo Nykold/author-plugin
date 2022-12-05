@@ -1,4 +1,6 @@
 enabled: true                     # Turn plugin on or off
+twigvar_enabled: false            # Enable custom Twig variable
+twigvar: authors                  # A custom Twig variable that can be used to display authors in a page
 
 author_taxonomy: '0'              # Taxonomy type where authors are added
 automatic_username_enabled: true  # Automatically add current user as author
@@ -16,6 +18,3 @@ page_link_attributes:             # HTML attributes added to the <a> tag of link
   rel: author
   target: _blank
 page_path: /author/               # Path to folder with author pages
-
-shortcode_enabled: true           # Enable custom shortcode (shortcode-core required)
-shortcode: authors                # A custom shortcode that can be used to display authors in a page (shortcode-core required)
