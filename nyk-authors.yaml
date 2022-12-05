@@ -16,3 +16,6 @@ page_link_attributes:             # HTML attributes added to the <a> tag of link
   rel: author
   target: _blank
 page_path: /author/               # Path to folder with author pages
+
+shortcode_enabled: true           # Enable custom shortcode (shortcode-core required)
+shortcode: authors                # A custom shortcode that can be used to display authors in a page (shortcode-core required)
