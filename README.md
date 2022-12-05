@@ -2,20 +2,20 @@
 
 The **Nyk Authors** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav).
 
-It is designed to work from within the [Admin Plugin](http://github.com/getgrav/grav-plugin-admin) and to provide simpler options to display authors' names in pages in Grav-powered blogs.
+It is designed to work from within the [Admin plugin](http://github.com/getgrav/grav-plugin-admin) and to provide simpler options to display authors' names in pages in Grav-powered blogs.
 
 > NOTE: The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. **It is still in early development and its functionality is still limited.** The way to use it in its current state is described in the [usage section](#usage). I intend to make it more versatile in the future.
 
 ## Installation
 
 Installing the Nyk Authors plugin can be done in one of three ways:
-1. The **admin method** lets you do so via the Admin Plugin, with which the plugin is designed to work
+1. The **admin method** lets you do so via the [Admin plugin](http://github.com/getgrav/grav-plugin-admin), with which the plugin is designed to work
 2. The **GPM (Grav Package Manager) installation method** lets you quickly install the plugin with a simple terminal command
 3. The **manual method** lets you do so via a zip file
 
 ### Admin Plugin (Preferred)
 
-This plugin is designed to work from within the Admin Plugin. So, if you are going to be using the Admin plugin, you can simply install the plugin directly by browsing the `Plugins` menu and clicking on the `Add` button.
+This plugin is designed to work from within the [Admin plugin](http://github.com/getgrav/grav-plugin-admin). So, if you are going to be using the Admin plugin, you can simply install the plugin directly by browsing the `Plugins` menu and clicking on the `Add` button.
 
 ### GPM Installation
 
@@ -39,7 +39,7 @@ You should now have all the plugin files under
 
 Before configuring this plugin, you should copy the `user/plugins/nyk-authors/nyk-authors.yaml` to `user/config/plugins/nyk-authors.yaml` and only edit that copy.
 
-**Note that by using the Admin Plugin, this step can be ignored.** A file with your configuration named nyk-authors.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the Admin Plugin.
+**Note that by using the [Admin plugin](http://github.com/getgrav/grav-plugin-admin), this step can be ignored.** A file with your configuration named nyk-authors.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the Admin Plugin.
 
 Here is the default configuration and an explanation of available options:
 
@@ -62,6 +62,9 @@ page_link_attributes:             # HTML attributes added to the <a> tag of link
   rel: author
   target: _blank
 page_path: /author/               # Path to folder with author pages
+
+shortcode_enabled: true           # Enable custom shortcode (shortcode-core required)
+shortcode: authors                # A custom shortcode that can be used to display authors in a page (shortcode-core required)
 ```
 
 <a id="usage"></a>
@@ -70,7 +73,7 @@ page_path: /author/               # Path to folder with author pages
 
 The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). For now, it serves that purpose. **It is still in early development and its functionality is still limited.** However, if you intend to use it for similar purposes, here is how you can do it:
 
-0. For now, **the plugin is designed to only work from within the admin plugin**.
+0. For now, **the plugin is designed to only work from within the [Admin plugin](http://github.com/getgrav/grav-plugin-admin)**.
 
 1. The plugin works by adding usernames to a taxonomy type (chosen in settings) in pages you are creating. It then compares those usernames to Grav's user database to find authors. **Make sure each of your authors has a user account in your Grav installation** (or has been added to the *"additional authors"* section of settings). The most relevant fields for each user are their *username* (which you will use in taxonomy and which will be a part of the author's page URL) and their *full name* (will be used as the author's name to be displayed in the page).
 
