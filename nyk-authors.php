@@ -6,7 +6,6 @@ use Grav\Common\Grav;
 use Grav\Common\Flex\Types\Pages\PageObject;
 use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
-use Grav\Common\Page\Collection;
 use Grav\Common\Plugin;
 use Grav\Common\User\User;
 use RocketTheme\Toolbox\Event\Event;
@@ -43,7 +42,7 @@ class NykAuthorsPlugin extends Plugin
     /**
      * Initialize the plugin
      */
-    public function onPluginsInitialized()
+    public function onPluginsInitialized(): void
     {
         // Don't proceed if not in the admin plugin
         if (!$this->isAdmin()) {
@@ -77,7 +76,7 @@ class NykAuthorsPlugin extends Plugin
         ]);
     }
 
-    public function onAdminCreatePageFrontmatter(Event $event)
+    public function onAdminCreatePageFrontmatter(Event $event): void
     {
         global $nykAuthorsTaxonomyType; // get chosen taxonomy type
 
@@ -105,7 +104,7 @@ class NykAuthorsPlugin extends Plugin
          */
     }
 
-    public function onAdminSave(Event $event)
+    public function onAdminSave(Event $event): void
     {
         global $nykAuthorsTaxonomyType; // get chosen taxonomy type
 
