@@ -271,6 +271,7 @@ class NykAuthorsPlugin extends Plugin
              */
 
             $lastAuthor = array_pop($authors);
+
             if ($authors) {
                 $authorString = implode(', ', $authors) . $conjunction . $lastAuthor;
             } else {

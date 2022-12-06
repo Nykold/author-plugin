@@ -45,8 +45,6 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true                     # Turn plugin on or off
-twigvar_enabled: false            # Enable custom Twig variable
-twigvar: authors                  # A custom Twig variable that can be used to display authors in a page
 
 author_taxonomy: '0'              # Taxonomy type where authors are added
 automatic_username_enabled: true  # Automatically add current user as author
@@ -99,7 +97,6 @@ The plugin was originally designed to work with my particular setup in [my blog]
 - [x] Add whitelist to only include certain authors
 - [x] Add possibility of including authors without a user account
 - [x] Add options other than categories to store authors
-- [ ] ~~Use shortcodes to create a simpler way to add the author list into the page~~
 
 As well as these steps, I continue to use the plugin on a daily basis and will constantly search for ways to make it more user-friendly.
 

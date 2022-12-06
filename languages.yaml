@@ -3,10 +3,6 @@ en:
     USERNAME: Username
     DISPLAY_NAME: Display Name
     GENERAL_SECTION: General Settings
-    TWIGVAR_ENABLED: Use custom Twig variable
-    TWIGVAR_ENABLED_HELP: Allows the set custom Twig variable to be active
-    TWIGVAR: Custom Twig variable
-    TWIGVAR_HELP: Set what custom Twig variable you want to use to display authors in a page
     PLUGIN_STATUS_HELP: Turns the plugin on or off
     AUTHOR_SECTION: Author Settings
     TAXONOMY: Author taxonomy type
@@ -48,10 +44,6 @@ pt:
     USERNAME: Nome de utilizador
     DISPLAY_NAME: Nome a exibir
     GENERAL_SECTION: Definições Gerais
-    TWIGVAR_ENABLED: Usar variável Twig personalizada
-    TWIGVAR_ENABLED_HELP: Permite que a variável Twig personalizada definida seja utilizada
-    TWIGVAR: Variável Twig personalizada
-    TWIGVAR_HELP: A variável Twig personalizada a utilizar para mostrar autores numa página
     PLUGIN_STATUS_HELP: Liga ou desliga o plugin
     AUTHOR_SECTION: Definições de Autor
     TAXONOMY: Tipo de taxonomia para autores

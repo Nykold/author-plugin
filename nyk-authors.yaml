@@ -1,6 +1,4 @@
 enabled: true                     # Turn plugin on or off
-twigvar_enabled: false            # Enable custom Twig variable
-twigvar: authors                  # A custom Twig variable that can be used to display authors in a page
 
 author_taxonomy: '0'              # Taxonomy type where authors are added
 automatic_username_enabled: true  # Automatically add current user as author
