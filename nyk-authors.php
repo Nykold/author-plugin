@@ -10,9 +10,7 @@ use Grav\Common\Page\Collection;
 use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Plugin;
 use Grav\Common\User\DataUser\User as DataUser;
-use Grav\Common\User\DataUser\UserCollection;
 use Grav\Common\User\User;
-use RocketTheme\Toolbox\File\File;
 use RocketTheme\Toolbox\Event\Event;
 
 /**
