@@ -82,7 +82,7 @@ page_path: /author/               # Path to folder with author pages
 
 ## Caveats
 
-1. The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). Although, I have since tried to make it more versatile, *its functionality is still limited*. If you have any feature suggestions, [let me know](https://github.com/Nykold/nyk-authors/issues).
+1. The plugin was originally designed to work with my particular setup in [my blog](https://ideal-social.com). Although I have since tried to make it more versatile, *its functionality is still limited*. If you have any feature suggestions, [let me know](https://github.com/Nykold/nyk-authors/issues).
 
 2. I have tried to sanitize some inputs, but I probably missed something. If you intend to let other people use the plugin, make sure they know what they are doing. Also, if you have security and stability improvements in mind, you can [suggest them](https://github.com/Nykold/nyk-authors/issues) or make pull requests.
 
