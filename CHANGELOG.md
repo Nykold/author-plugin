@@ -1,3 +1,11 @@
+# v1.0.1
+## 06/12/2022
+
+1. [](#improved)
+    * Removed unused classes to reduce clutter in code
+2. [](#bugfix)
+    * Fixed bug preventing user from saving pages with an empty taxonomy
+    
 # v1.0.0
 ## 06/12/2022
 

@@ -1,6 +1,6 @@
 # Nyk Authors Plugin
 
-The **Nyk Authors** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav).
+The **Nyk Authors** plugin is an extension for [Grav CMS](http://github.com/getgrav/grav).
 
 It is designed to work from within the [Admin plugin](http://github.com/getgrav/grav-plugin-admin) and to provide simpler options to display authors' names in pages in Grav-powered blogs.
 
