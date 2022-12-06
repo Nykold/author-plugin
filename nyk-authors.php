@@ -5,7 +5,6 @@ use Composer\Autoload\ClassLoader;
 use Grav\Common\Grav;
 use Grav\Common\Flex\Types\Pages\PageObject;
 use Grav\Common\Page\Page;
-use Grav\Common\Page\Pages;
 use Grav\Common\Plugin;
 use Grav\Common\User\User;
 use RocketTheme\Toolbox\Event\Event;
