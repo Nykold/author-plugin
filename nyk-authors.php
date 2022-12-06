@@ -130,6 +130,11 @@ class NykAuthorsPlugin extends Plugin
              * Takes usernames in chosen taxonomy type and adds corresponding full names to an array
              */
 
+            // Don't proceed if there is nothing in the page's taxonomy
+            if (!isset($header['taxonomy'][$nykAuthorsTaxonomyType])) {
+                return;
+            }
+            
             $input = $header['taxonomy'][$nykAuthorsTaxonomyType]; // taxonomy type in frontmatter (usernames)
 
             $authors = array(); // empty array to add full names to
@@ -239,7 +244,7 @@ class NykAuthorsPlugin extends Plugin
              */
     
             // test output to frontmatter (development)
-            $header['test'] = $nykAuthorsTaxonomyType;
+            // $header['test'] = $nykAuthorsTaxonomyType;
 
             /**
              * SECTION Conjuntion Based on Lang
