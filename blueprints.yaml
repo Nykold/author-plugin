@@ -1,7 +1,7 @@
 name: Nyk Authors
 slug: nyk-authors
 type: plugin
-version: 0.8.0
+version: 1.0.0
 description: A plugin to display author names in Grav-powered blogs
 icon: user-circle
 author:
@@ -9,7 +9,7 @@ author:
   email: jose.alves.amaro@gmail.com
   url: https://github.com/Nykold
 homepage: https://github.com/Nykold/nyk-authors
-keywords: grav, plugin, author, autor, frontmatter, auto, automatic, category, taxonomy
+keywords: grav, plugin, author, frontmatter, auto, automatic, taxonomy, blog, blogging
 bugs: https://github.com/Nykold/nyk-authors/issues
 docs: https://github.com/Nykold/nyk-authors/blob/main/README.md
 license: MIT

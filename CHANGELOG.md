@@ -1,3 +1,9 @@
+# v1.0.0
+## 06/12/2022
+
+1. [](#new)
+    * First production release
+
 # v0.8.0
 ## 02/12/2022
 
@@ -35,7 +41,7 @@
 
 1. [](#improved)
     * Added a specific option in config to separate the final author just with a comma (previously the fallback if no config was selected)
-1. [](#bugfix)
+2. [](#bugfix)
     * Fixed possible issues that could occur if no path for the author pages was chosen in config (added fallback to /username)
 
 # v0.3.0
@@ -52,7 +58,7 @@
     * Added language options for the conjunction before the final author in a string with multiple authors
     * Added the option to write a custom conjunction
     * Added a toggle to turn off the feature that automatically adds the current user as an author of a newly created page
-1. [](#improved)
+2. [](#improved)
     * Made a better config page for the plugin to accomodate the new features
 
 # v0.1.1
