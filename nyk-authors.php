@@ -7,9 +7,7 @@ use Grav\Common\Flex\Types\Pages\PageObject;
 use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
 use Grav\Common\Page\Collection;
-use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Plugin;
-use Grav\Common\User\DataUser\User as DataUser;
 use Grav\Common\User\User;
 use RocketTheme\Toolbox\Event\Event;
 
