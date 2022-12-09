@@ -1,7 +1,7 @@
 name: Nyk Authors
 slug: nyk-authors
 type: plugin
-version: 1.0.1
+version: 1.0.2
 description: A plugin to display author names in Grav-powered blogs
 icon: user-circle
 author:

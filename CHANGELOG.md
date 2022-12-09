@@ -1,3 +1,9 @@
+# v1.0.2
+## 09/12/2022
+
+1. [](#new)
+    * Added french translation of plugin settings
+    
 # v1.0.1
 ## 06/12/2022
 
