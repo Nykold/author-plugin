@@ -1,6 +1,5 @@
 en:
   PLUGIN_NYK_AUTHORS:
-    USERNAME: Username
     DISPLAY_NAME: Display Name
     GENERAL_SECTION: General Settings
     PLUGIN_STATUS_HELP: Turns the plugin on or off
@@ -16,7 +15,6 @@ en:
     EXTRA_AUTHORS: Additional authors
     EXTRA_AUTHORS_HELP: By default the plugin fetchs user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
     LANG_SECTION: Language Settings
-    LANG_OPTION: Language
     LANG_OPTION_HELP: The language you want to use for the conjunction in pages with more than one author
     LANG_EN: English ("and")
     LANG_FR: French ("et")
@@ -39,9 +37,47 @@ en:
     PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
     PAGE_INSTRUCTIONS: Author pages should be at `/path/to/folder/username` and should already be created, if you want a link to them. If no path is set, it defaults to `/username`.
 
+fr:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Nom affiché
+    GENERAL_SECTION: Paramètres Généraux
+    PLUGIN_STATUS_HELP: Active ou désactive le plugin
+    AUTHOR_SECTION: Paramètres de l'Auteur
+    TAXONOMY: Type de taxonomie pour les auteurs
+    TAXONOMY_HELP: Le type de taxonomie utilisé pour ajouter des auteurs aux pages
+    AUTOMATIC_USERNAME: Ajouter automatiquement l'utilisateur comme auteur
+    AUTOMATIC_USERNAME_HELP: Ajout automatique de l'utilisateur actuel comme auteur lors de la création de nouvelles pages
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Utilisateurs qui ne seront pas considérés comme auteurs dans aucune page
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Seuls ces utilisateurs seront considérés comme auteurs dans toutes les pages
+    EXTRA_AUTHORS: Auteurs supplémentaires
+    EXTRA_AUTHORS_HELP: Par défaut, le plugin utilise des comptes d'utilisateurs pour trouver les noms des auteurs. Ce paramètre vous permet d'ajouter des auteurs qui n'ont pas de compte ou de remplacer le nom d'un auteur.
+    LANG_SECTION: Paramètres de Langue
+    LANG_OPTION_HELP: La langue à utiliser pour la conjonction dans les pages avec plus d'un auteur
+    LANG_EN: Anglais ("and")
+    LANG_FR: Français ("et")
+    LANG_DE: Allemand ("und")
+    LANG_PT: Portugais ("e")
+    LANG_ES: Espagnol ("y")
+    LANG_COMMA: Juste une virgule (",")
+    LANG_CUSTOM: Autres (définir une conjonction personnalisée)
+    CUSTOM_CONJUNCTION: Conjonction personnalisée (avec "Autres" sélectionné)
+    CUSTOM_CONJUNCTION_HELP: Définir une conjonction personnalisée pour les pages avec plus d'un auteur
+    PAGE_SECTION: Paramètres de la Page d'Auteur
+    PAGE_LINK: Ajouter des hyperliens vers les pages d'auteur
+    PAGE_LINK_HELP: Ajouter automatiquement un hyperlien vers la page d'un auteur à cet auteur dans la liste
+    PAGE_LINK_ATTRIBUTES: Attributs de l'hyperlien
+    PAGE_LINK_ATTRIBUTES_HELP: Attributs à ajouter aux balises <a> des hyperliens vers les pages des auteurs (l'attribut 'href' sera écrasé)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribut (par ex. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Valeur (par ex. 'author')
+    PAGE_PATH: Dossier des pages d'auteur (/chemin/vers/le/dossier/)
+    PAGE_PATH_HELP: "Définir le chemin vers le dossier contenant les pages d'auteur (format: /chemin/vers/le/dossier/)"
+    PAGE_PATH_ERROR: 'Chemin invalide (format: /chemin/vers/le/dossier/)'
+    PAGE_INSTRUCTIONS: Les pages d'auteur doivent être dans `/chemin/vers/le/dossier/nom-d'utilisateur` et doivent déjà être créées, si vous voulez un hyperlien vers elles. Si le chemin n'est pas défini, ce sera automatiquement `/nom-d'utilisateur`.
+
 pt:
   PLUGIN_NYK_AUTHORS:
-    USERNAME: Nome de utilizador
     DISPLAY_NAME: Nome a exibir
     GENERAL_SECTION: Definições Gerais
     PLUGIN_STATUS_HELP: Liga ou desliga o plugin
@@ -57,7 +93,6 @@ pt:
     EXTRA_AUTHORS: Autores adicionais
     EXTRA_AUTHORS_HELP: Automaticamente, o plugin usa as contas de utilizador para encontrar nomes de autores. Esta definição permite adicionar autores que não tenham uma conta correspondente ou substituir o nome atribuído a um autor.
     LANG_SECTION: Definições de Idioma
-    LANG_OPTION: Idioma
     LANG_OPTION_HELP: O idioma a usar para a conjunção em páginas com mais de um autor
     LANG_EN: Inglês ("and")
     LANG_FR: Francês ("et")
@@ -73,9 +108,9 @@ pt:
     PAGE_LINK_HELP: Adiciona hiperligações para a página de cada autor a esse autor na lista
     PAGE_LINK_ATTRIBUTES: Atributos da hiperligação
     PAGE_LINK_ATTRIBUTES_HELP: Atributos a adicionar às tags <a> das hiperligações para páginas de autor (o atributo 'href' será substituído)
-    PAGE_LINK_ATTRIBUTES_KEYPH: "Atributo (ex.: 'rel')"
-    PAGE_LINK_ATTRIBUTES_VALUEPH: "Valor (ex.: 'author')"
+    PAGE_LINK_ATTRIBUTES_KEYPH: Atributo (p. ex. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Valor (p. ex. 'author')
     PAGE_PATH: Pasta de páginas de autor (/caminho/para/a/pasta/)
     PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
     PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'
-    PAGE_INSTRUCTIONS: As páginas de autor deverão estar em `/caminho/para/a/pasta/nome de utilizador` e deverão ser previamente criadas, para que uma hiperligação seja adicionada. Se o caminho não for definido, será `/nome de utilizador`, automaticamente.
+    PAGE_INSTRUCTIONS: As páginas de autor deverão estar em `/caminho/para/a/pasta/nome-de-utilizador` e deverão ser previamente criadas, para que uma hiperligação seja adicionada. Se o caminho não for definido, será `/nome-de-utilizador`, automaticamente.

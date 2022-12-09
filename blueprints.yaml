@@ -85,7 +85,7 @@ form:
             blacklist:
               type: array
               value_only: true
-              placeholder_value: PLUGIN_NYK_AUTHORS.USERNAME
+              placeholder_value: PLUGIN_ADMIN.USERNAME
               style: vertical
         whitelist_fieldset:
           type: fieldset
@@ -109,7 +109,7 @@ form:
             whitelist:
               type: array
               value_only: true
-              placeholder_value: PLUGIN_NYK_AUTHORS.USERNAME
+              placeholder_value: PLUGIN_ADMIN.USERNAME
               style: vertical
         extra_authors_fieldset:
           type: fieldset
@@ -122,7 +122,7 @@ form:
           fields:
             extra_authors:
               type: array
-              placeholder_key: PLUGIN_NYK_AUTHORS.USERNAME
+              placeholder_key: PLUGIN_ADMIN.USERNAME
               placeholder_value: PLUGIN_NYK_AUTHORS.DISPLAY_NAME
               style: vertical
     spacer2:
@@ -134,7 +134,7 @@ form:
       fields:
         lang:
           type: select
-          label: PLUGIN_NYK_AUTHORS.LANG_OPTION
+          label: PLUGIN_ADMIN.LANGUAGE
           help: PLUGIN_NYK_AUTHORS.LANG_OPTION_HELP
           default: comma
           options:
