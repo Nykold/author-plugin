@@ -13,7 +13,7 @@ en:
     WHITELIST: Whitelist
     WHITELIST_HELP: Only these users will be included as authors in any page
     EXTRA_AUTHORS: Additional authors
-    EXTRA_AUTHORS_HELP: By default the plugin fetchs user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
+    EXTRA_AUTHORS_HELP: By default the plugin fetches user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
     LANG_SECTION: Language Settings
     LANG_OPTION_HELP: The language you want to use for the conjunction in pages with more than one author
     LANG_EN: English ("and")
@@ -75,6 +75,45 @@ fr:
     PAGE_PATH_HELP: "Définir le chemin vers le dossier contenant les pages d'auteur (format: /chemin/vers/le/dossier/)"
     PAGE_PATH_ERROR: 'Chemin invalide (format: /chemin/vers/le/dossier/)'
     PAGE_INSTRUCTIONS: Les pages d'auteur doivent être dans `/chemin/vers/le/dossier/nom-d'utilisateur` et doivent déjà être créées, si vous voulez un hyperlien vers elles. Si le chemin n'est pas défini, ce sera automatiquement `/nom-d'utilisateur`.
+
+de:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Anzeigename
+    GENERAL_SECTION: Allgemeine Einstellungen
+    PLUGIN_STATUS_HELP: Aktiviert oder deaktiviert das Plugin
+    AUTHOR_SECTION: Autor Einstellungen
+    TAXONOMY: Autor Tag-Typ
+    TAXONOMY_HELP: Der Tag-Typ, mit dem Autoren zu Seiten hinzugefügt werden
+    AUTOMATIC_USERNAME: Automatisch Benutzer als Autor hinzufügen
+    AUTOMATIC_USERNAME_HELP: Fügt den aktuellen Benutzer als Autor hinzu, wenn neue Seiten erstellt werden
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Benutzer, die nicht als Autoren in Seiten hinzugefügt werden
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Nur diese Benutzer werden als Autoren in Seiten hinzugefügt
+    EXTRA_AUTHORS: Weitere Autoren
+    EXTRA_AUTHORS_HELP: Standardmäßig durchsucht das Plugin Benutzerkonten nach Autorennamen. Mit dieser Einstellung können Sie Autoren ohne Benutzerkonto hinzufügen oder den Namen eines Autors überschreiben.
+    LANG_SECTION: Spracheinstellungen
+    LANG_OPTION_HELP: Die Sprache, die Sie für die Konjunktion verwenden möchten, auf Seiten mit mehr als einem Autor
+    LANG_EN: Englisch ("and")
+    LANG_FR: Französisch ("et")
+    LANG_DE: Deutsch ("und")
+    LANG_PT: Portugiesisch ("e")
+    LANG_ES: Spanisch ("y")
+    LANG_COMMA: Nur ein Komma (",")
+    LANG_CUSTOM: Andere (benutzerdefinierte Konjunktion)
+    CUSTOM_CONJUNCTION: Benutzerdefinierte Konjunktion (mit "Andere" ausgewählt)
+    CUSTOM_CONJUNCTION_HELP: Setzen Sie eine benutzerdefinierte Konjunktion für Seiten mit mehr als einem Autor
+    PAGE_SECTION: Autorenseiten-Einstellungen
+    PAGE_LINK: Links zu Autorenseiten hinzufügen
+    PAGE_LINK_HELP: Automatisches hinzufügen einen Link zu einer Autorenseite zu diesem Autor in der Liste
+    PAGE_LINK_ATTRIBUTES: Link-Attribute
+    PAGE_LINK_ATTRIBUTES_HELP: Attribute, die Sie den <a>-Tags der Links zur Autorenseite hinzufügen möchten (das 'href'-Attribut wird überschrieben)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribut (z. B. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Wert (z. B. 'author')
+    PAGE_PATH: Ordner der Autorenseiten (/pfad/zum/ordner)
+    PAGE_PATH_HELP: 'Legen Sie den Pfad zu dem Ordner fest, der die Autorenseiten enthält (format: /pfad/zum/ordner)'
+    PAGE_PATH_ERROR: 'Ungültiger Pfad (format: /pfad/zum/ordner)'
+    PAGE_INSTRUCTIONS: Autorenseiten sollten sich unter `/pfad/zum/ordner/benutzername` befinden und bereits erstellt sein, wenn Sie einen Link zu ihnen wünschen. Wenn kein Pfad festgelegt ist, ist der Standardwert `\benutzername`.
 
 pt:
   PLUGIN_NYK_AUTHORS:
