@@ -1,3 +1,9 @@
+# v1.0.3
+## 13/12/2022
+
+1. [](#new)
+    * Added german translation of plugin settings
+    
 # v1.0.2
 ## 09/12/2022
 
