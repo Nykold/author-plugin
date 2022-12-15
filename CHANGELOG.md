@@ -1,3 +1,9 @@
+# v1.0.4
+## 15/12/2022
+
+1. [](#new)
+    * Added spanish translation of plugin settings
+    
 # v1.0.3
 ## 13/12/2022
 
